@@ -426,29 +426,40 @@ a:hover{
 
 /* <===================HOME===================> */
 
-.container-out{
+.container-out {
     margin-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;              /* corrigido: antes 100vw */
 }
-.home-img{
-    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
-    background-size: 107%;
-    background-position: center;
 
+.home-img {
+    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
+    background-size: cover;   /* corrigido: antes 107% */
+    background-position: center;
+    height: auto;             /* evita scroll interno */
+    width: 100%;              /* ocupa largura sem criar barra extra */
+    overflow: visible;        /* não cria scroll próprio */
 }
-.home-img-sm{
+
+.home-img-sm {
     display: none;
     width: 100%;
     margin: 20px 0 0 0;
     height: 50vh;
+    background-size: cover;
+    background-position: center;
 }
-#home-img-lg{
+
+#home-img-lg {
     display: block;
-    height: 110vh;
-    width: 50vw;
-    background-position-x: -100px;
+    height: auto;             /* corrigido: antes 110vh */
+    min-height: 80vh;         /* altura mínima confortável */
+    width: 50%;               /* corrigido: antes 50vw */
+    background-position: center;
+    background-size: cover;
+    overflow: visible;        /* não cria scroll próprio */
 }
 
 .event-header {
@@ -813,6 +824,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
