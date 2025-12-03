@@ -67,6 +67,12 @@ body {
     max-width: 100%;
   }
 
+  /* Corrigir containers que usam 100vw */
+  .v-reposition-container,
+  .h-reposition-container {
+    width: 100%;   /* usar % em vez de vw */
+  }
+
   /* Reduz margens horizontais para caber no ecrã */
   .hz-margin {
     padding: 0 1rem;
@@ -86,8 +92,8 @@ body {
   h3 { font-size: 1.2rem; }
   .text { font-size: 1rem; }
 }
-/* <===================MEDIA NAVBAR===================> */
 
+/*Navbar */
 @media (max-width:1000px){
     label.logo{
         font-size: 20px;
@@ -119,7 +125,8 @@ body {
         margin: 50px 0;
         line-height: 30px;
     }
-    nav li ul a{
+    /* CORRIGIDO: antes estava nav li ul a */
+    nav ul li a {
         font-size: 20px;
     }
     a:hover, a.active{
@@ -131,9 +138,7 @@ body {
     }
 }
 
-
-/* <===================MEDIA TIMELINE===================> */
-
+/*Timeline */
 @media (max-width: 1000px) {
     .timeline {
         background-color: rgba(50, 50, 50, 0.95); /* fundo escuro para mobile */
@@ -165,7 +170,6 @@ body {
     }
 }
 
-
 /* Story */
 @media (max-width: 1000px) {
   .h-reposition-container {
@@ -188,6 +192,7 @@ body {
     text-align: center;
   }
 }
+
 /* gallery */
 @media (max-width: 1000px) {
   .gallery-img {
@@ -195,6 +200,7 @@ body {
     height: 90vw;
   }
 }
+
 /* home */
 @media (max-width:1000px){
     .container-out{
@@ -216,7 +222,7 @@ body {
     }
 }
 
-/* quote */
+/* stay */
 @media (max-width:1000px) {
   .stay-container {
     flex-direction: column;
@@ -802,5 +808,6 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
