@@ -44,6 +44,23 @@ body {
 }
 
 /* ================= MOBILE FIXES ================= */
+
+html, body {
+  overflow-x: hidden;   /* bloqueia scroll lateral */
+  max-width: 100%;      /* impede ultrapassar largura */
+}
+
+@media (max-width:768px) {
+  .hz-margin {
+    padding: 0 1rem !important; /* margens menores */
+  }
+  .v-reposition-container,
+  .h-reposition-container {
+    width: 100% !important;     /* não usar 100vw */
+  }
+}
+
+
 @media (max-width:768px) {
 
   /* Flor no fundo mais pequena e sem deslocar */
@@ -59,12 +76,6 @@ body {
     font-size: 2rem;
     padding: 10px;
     display: inline-block;
-  }
-
-  /* Evitar scroll lateral */
-  html, body {
-    overflow-x: hidden;
-    max-width: 100%;
   }
 
   /* Corrigir containers que usam 100vw */
@@ -808,6 +819,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
