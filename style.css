@@ -43,6 +43,7 @@ body {
   background-position: center;
 }
 
+
 /* ================= MOBILE FIXES ================= */
 
 html, body {
@@ -50,53 +51,30 @@ html, body {
   max-width: 100%;      /* impede ultrapassar largura */
 }
 
+/* Ajustes gerais para mobile */
 @media (max-width:768px) {
   .hz-margin {
     padding: 0 1rem !important; /* margens menores */
   }
+
   .v-reposition-container,
   .h-reposition-container {
     width: 100% !important;     /* não usar 100vw */
   }
-}
-
-@media (max-width:768px) {
-  .timeline,
-  .registry-img,
-  .home-img-sm {
-    overflow: visible !important; /* não cria scroll interno */
-    height: auto !important;      /* deixa ajustar ao conteúdo */
-    width: 100% !important;
-  }
-}
-
-
-@media (max-width:768px) {
 
   /* Flor no fundo mais pequena e sem deslocar */
   body::before {
-    right: 0;          /* elimina deslocamento negativo */
-    width: 180px;      /* reduz largura */
-    height: 140px;     /* reduz altura */
-    top: 40px;         /* ajusta posição */
+    right: 0 !important;        /* elimina deslocamento negativo */
+    width: 150px !important;    /* reduz largura */
+    height: 120px !important;   /* reduz altura */
+    top: 20px !important;       /* ajusta posição */
   }
 
   /* Link "Ver no mapa" maior e mais legível */
   .location a {
     font-size: 2rem;
-    padding: 10px;
+    padding: 12px 16px;
     display: inline-block;
-  }
-
-  /* Corrigir containers que usam 100vw */
-  .v-reposition-container,
-  .h-reposition-container {
-    width: 100%;   /* usar % em vez de vw */
-  }
-
-  /* Reduz margens horizontais para caber no ecrã */
-  .hz-margin {
-    padding: 0 1rem;
   }
 
   /* Forçar colunas a empilhar no mobile */
@@ -112,9 +90,31 @@ html, body {
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.2rem; }
   .text { font-size: 1rem; }
+
+  /* Corrigir scroll duplo no home */
+  .home-img,
+  #home-img-lg {
+    height: auto !important;    /* não força altura fixa */
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  /* Mostrar imagem do home em baixo sem repetir */
+  .home-img-sm {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat; /* impede repetição vertical */
+    margin-top: 20px;             /* aparece abaixo do texto */
+  }
+
+  #home-img-lg {
+    display: none !important;     /* esconde versão desktop */
+  }
 }
 
-/*Navbar */
+/* Navbar */
 @media (max-width:1000px){
     label.logo{
         font-size: 20px;
@@ -146,7 +146,6 @@ html, body {
         margin: 50px 0;
         line-height: 30px;
     }
-    /* CORRIGIDO: antes estava nav li ul a */
     nav ul li a {
         font-size: 20px;
     }
@@ -159,10 +158,10 @@ html, body {
     }
 }
 
-/*Timeline */
-@media (max-width: 1000px) {
+/* Timeline */
+@media (max-width:1000px) {
     .timeline {
-        background-color: rgba(50, 50, 50, 0.95); /* fundo escuro para mobile */
+        background-color: rgba(50, 50, 50, 0.95);
         position: relative;
         top: 0;
         width: 100%;
@@ -171,39 +170,33 @@ html, body {
         box-shadow: none;
         margin-bottom: 8vh;
     }
-
     .timeline-container {
         flex-direction: column;
     }
-
     .timeline-img {
         height: 50vh;
         width: 100%;
         margin-top: 2rem;
     }
-
     .timeline-container .text {
         padding: 1rem 0;
     }
-
     .timeline-container.centered {
         gap: 1.5rem;
     }
 }
 
 /* Story */
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .h-reposition-container {
     position: relative;
     top: 0;
   }
-
   #story {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   #story h3,
   #story p {
     width: 90vw;
@@ -214,28 +207,15 @@ html, body {
   }
 }
 
-/* gallery */
-@media (max-width: 1000px) {
+/* Gallery */
+@media (max-width:1000px) {
   .gallery-img {
     flex: 0 0 90vw;
     height: 90vw;
   }
 }
 
-/* home */
-@media (max-width:1000px){
-    .container-out{
-        flex-direction: column;
-    }
-    .home-img-sm{
-        display: block;
-    }
-    #home-img-lg{
-        display: none;
-    }
-}
-
-/* quote */
+/* Quote */
 @media (max-width:1570px){
     .quote h1{
         font-size: 2rem;
@@ -243,7 +223,7 @@ html, body {
     }
 }
 
-/* stay */
+/* Stay */
 @media (max-width:1000px) {
   .stay-container {
     flex-direction: column;
@@ -254,7 +234,7 @@ html, body {
   }
 }
 
-/* registry */
+/* Registry */
 @media (max-width:1000px) {
   #registry {
     flex-direction: column;
@@ -266,7 +246,7 @@ html, body {
   }
   .registry-img {
     max-width: 100%;
-    height: 50vh; /* altura menor em mobile */
+    height: 50vh;
     margin-top: 5vh;
   }
 }
@@ -829,6 +809,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
