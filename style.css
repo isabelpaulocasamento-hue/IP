@@ -98,14 +98,17 @@ html, body {
     overflow: visible !important;
     width: 100% !important;
   }
+}
 
-  /* Mostrar imagem do home em baixo sem repetir */
+@media (max-width:768px) {
   .home-img-sm {
     display: block !important;
     width: 100%;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat; /* impede repetição vertical */
+    height: 50vh;                 /* altura fixa confortável */
+    background-size: cover;       /* cobre toda a área */
+    background-repeat: no-repeat; /* não repete */
+    background-position: center;  /* centrada */
+    background-attachment: fixed; /* fica estática ao fazer scroll */
     margin-top: 20px;             /* aparece abaixo do texto */
   }
 
@@ -113,6 +116,7 @@ html, body {
     display: none !important;     /* esconde versão desktop */
   }
 }
+
 
 /* Navbar */
 @media (max-width:1000px){
@@ -809,6 +813,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
