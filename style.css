@@ -43,15 +43,50 @@ body {
   background-position: center;
 }
 
+/* ================= MOBILE FIXES ================= */
 @media (max-width:768px) {
+
+  /* Flor no fundo mais pequena e sem deslocar */
+  body::before {
+    right: 0;          /* elimina deslocamento negativo */
+    width: 180px;      /* reduz largura */
+    height: 140px;     /* reduz altura */
+    top: 40px;         /* ajusta posição */
+  }
+
+  /* Link "Ver no mapa" maior e mais legível */
+  .location a {
+    font-size: 1.3rem;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  /* Evitar scroll lateral */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Reduz margens horizontais para caber no ecrã */
   .hz-margin {
-    padding: 0 1rem;    /* reduz margens horizontais */
+    padding: 0 1rem;
   }
-  .container-out, #registry, .stay-container {
-    flex-direction: column; /* força colunas a empilhar */
-    width: 100%;            /* ocupa só largura do ecrã */
+
+  /* Forçar colunas a empilhar no mobile */
+  .container-out,
+  #registry,
+  .stay-container {
+    flex-direction: column;
+    width: 100%;
   }
+
+  /* Ajustar fontes para não ficarem gigantes */
+  h1 { font-size: 3rem; line-height: 3.5rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  .text { font-size: 1rem; }
 }
+
 /* <===================TYPOGRAPHY & FONTS===================> */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');
@@ -755,3 +790,4 @@ footer h2 {
   /* amounts and words */
 
 }
+
