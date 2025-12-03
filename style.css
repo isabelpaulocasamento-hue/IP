@@ -60,6 +60,16 @@ html, body {
   }
 }
 
+@media (max-width:768px) {
+  .timeline,
+  .registry-img,
+  .home-img-sm {
+    overflow: visible !important; /* não cria scroll interno */
+    height: auto !important;      /* deixa ajustar ao conteúdo */
+    width: 100% !important;
+  }
+}
+
 
 @media (max-width:768px) {
 
@@ -819,6 +829,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
