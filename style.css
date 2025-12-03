@@ -1,0 +1,746 @@
+/* <===================CSS VARIABLES===================> */
+
+:root {
+
+    --h1-size: 7rem;
+    --h2-size: 2.1rem;
+    --h3-size: 1.7rem;
+    --text-size: 1.3rem;
+    --horizontal-margin-spacing: 6rem;
+
+    /* Paleta extraída da imagem */
+   /* --verde-estrutura: #4b5a3a;*/
+   /* --castanho-vestido: #8c5e3c;*/
+   /* --rosa-shawl: #d8c4b4;*/
+    /*--pedra-clara: #e7e3dc;*/
+    /*--texto-escuro: #3f3f2f;*/
+    /*--branco-suave: #fdfaf5;*/
+
+
+    --h1cor: rgba(75, 90, 58, 1);/* verde musgo */
+    --h2cor: rgba(140, 94, 60, 1); /* castanho */
+    --h3cor: rgba(140, 94, 60, 1); /* castanho*/
+    --pedra-clara: rgba(231, 227, 220, 1); /* fundo claro */
+    --texto-escuro: rgba(63, 63, 47, 1);/* texto principal */
+    --botaocor: rgba(255, 255, 255, 1);  /* branco - letra do botao*/
+--botaofundocor:rgba(140, 94, 60, 0.8); 
+--cor-fundo-principal: rgba(231, 227, 220, 0.95)
+
+}
+
+.icon-img {
+  width: 80px;
+  height: 80px;
+  margin-right: 0px;
+   filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
+}
+/* <===================BASE===================> */
+
+body {
+  background-image: url('Images_IsaPaulin/fundo.png');
+  background-size: 100% 100%;   /* força a ocupar largura e altura */
+  background-repeat: repeat;
+  background-position: center;
+}
+/* <===================TYPOGRAPHY & FONTS===================> */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');
+
+/* <===================UNIVERSAL CSS===================> */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    color: var(--texto-escuro);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hz-margin {
+    padding: 0 var(--horizontal-margin-spacing);
+}
+
+/* <===================HEADINGS===================> */
+
+h1 {
+    font-size: var(--h1-size);
+    font-weight: 500;
+    line-height: var(--h1-size);
+    color: var(--h1cor);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-weight: bold;
+    color: var(--h2cor);
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-weight: 500;
+    color: var(--h3cor);
+}
+
+/* <===================TEXT===================> */
+
+.text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--text-size);
+    line-height: 1.6;
+    color: var(--texto-escuro);
+}
+
+/* <===================BUTTONS===================> */
+
+.huge-btn {
+    display: block;
+    font-size: 1.3rem;
+    background-color: var(--botaofundocor);
+    color: var(--botaocor);
+    border: none;
+    padding: 25px 50px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.huge-btn:hover {
+    background-color: var(--castanho-vestido);
+    color: var(--branco-suave);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+/* <===================ANIMATIONS===================> */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* <===================LAYOUT===================> */
+
+.v-reposition-container {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+}
+
+.h-reposition-container {
+    width: 100vw;
+    position: relative;
+    top: 0;
+}/* <===================NAVBAR===================> */
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 80px;              /* move para baixo */
+  right: -20px;            /* afasta da margem direita */
+  width: 400px;
+  height: 300px;
+  background: url('Images_IsaPaulin/complemento.png') no-repeat right top;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+
+  /* filtro castanho */
+  filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
+
+  /* rotação leve */
+  transform: rotate(-20deg); /* negativo roda para a esquerda, positivo para a direita */
+}
+nav {
+  position: relative;
+  z-index: 2;
+}
+
+label.logo{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 0 0 30px;
+    font-weight: bold;
+color: rgba(75, 90, 58, 1); /* h1*/
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(140, 94, 60, 1); 
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width:1000px){
+    label.logo{
+        font-size: 20px;
+    }
+    nav ul li a{
+        font-size: 10px;
+    }
+    html{
+        font-size: 10px;
+    }
+}
+@media (max-width:570px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+        top: 80px;
+        font-weight: bold;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav li ul a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/* <===================HOME===================> */
+
+.container-out{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.home-img{
+    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
+    background-size: 107%;
+    background-position: center;
+
+}
+.home-img-sm{
+    display: none;
+    width: 100%;
+    margin: 20px 0 0 0;
+    height: 50vh;
+}
+#home-img-lg{
+    display: block;
+    height: 110vh;
+    width: 50vw;
+    background-position-x: -100px;
+}
+@media (max-width:1000px){
+    .container-out{
+        flex-direction: column;
+    }
+    .home-img-sm{
+        display: block;
+    }
+    #home-img-lg{
+        display: none;
+    }
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
+}
+
+.location a {
+  color: rgba(140, 94, 60, 1); /* castanho */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.location a:hover {
+  text-decoration: underline;
+}
+
+/* <===================TIMELINE===================> */
+
+
+.timeline {
+    display: block;
+    background-color: rgba(30, 30, 30, 0.1); /* fundo escuro translúcido */
+    color: #fff; /* texto claro para contraste */
+    position: relative;
+    top: -10vh; /* sobreposição sobre a seção anterior */
+    width: 100%;
+    backdrop-filter: blur(4px);
+    padding: 8vh var(--horizontal-margin-spacing);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* leve sombra externa */
+    border-radius: 8px;
+    z-index: 1;
+    margin-bottom: -2vh; /* espaço para a próxima seção */
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: row;
+    margin: 8vh 0;
+    align-items: flex-start;
+}
+
+.timeline-container.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.timeline-container.centered .huge-btn {
+    margin-bottom: 2rem;
+}
+
+.simply-countdown-one {
+    display: block;
+    margin: 0 auto;
+}
+
+.timeline-img {
+    background-image: url('Images_IsaPaulin/isa_paulin (23).jpeg');
+    height: 70vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.timings {
+    margin: 30px;
+    flex: 1;
+}
+
+.timeline-container .text {
+    padding: 1rem 2rem 1rem 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 1000px) {
+    .timeline {
+        background-color: rgba(50, 50, 50, 0.95); /* fundo escuro para mobile */
+        position: relative;
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(0);
+        height: fit-content;
+        box-shadow: none;
+        margin-bottom: 8vh;
+    }
+
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-img {
+        height: 50vh;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .timeline-container .text {
+        padding: 1rem 0;
+    }
+
+    .timeline-container.centered {
+        gap: 1.5rem;
+    }
+}
+
+/* <===================STORY===================> */
+
+#story {
+  display: flex;
+  flex-direction: column;     /* empilha os elementos verticalmente */
+  align-items: center;        /* centraliza horizontalmente */
+  text-align: center;         /* centraliza o conteúdo textual */
+  padding-top: 10vh;
+  margin: 0vh 0;
+}
+
+#story h3,
+#story p {
+  width: 80vw;                /* largura confortável para leitura */
+  margin: 1rem auto;          /* centraliza o bloco */
+  text-align: center;         /* centraliza o texto */
+  font-size: var(--h3-size);
+  line-height: var(--h3-size);
+}
+
+/* Responsivo para ecrãs pequenos */
+@media (max-width: 1000px) {
+  .h-reposition-container {
+    position: relative;
+    top: 0;
+  }
+
+  #story {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #story h3,
+  #story p {
+    width: 90vw;
+    margin: 1rem auto;
+    font-size: var(--text-size);
+    line-height: var(--text-size);
+    text-align: center;
+  }
+}
+/* <===================GALLERY===================> */
+.gallery-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10vh 0;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.gallery-img {
+  flex: 0 0 30vw;
+  height: 30vw;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(140, 94, 60, 0.8);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.gallery-btn.prev {
+  left: 10px;
+}
+
+.gallery-btn.next {
+  right: 10px;
+}
+
+
+@media (max-width: 1000px) {
+  .gallery-img {
+    flex: 0 0 90vw;
+    height: 90vw;
+  }
+}
+
+
+/* <===================QUOTE===================> */
+.quote{
+    margin: 10vh 0;
+}
+.quote h1{
+    width: 55vw;
+    font-size: 4rem;
+    text-align: center;
+    margin: auto;
+}
+.author{
+    text-align: center;
+    margin: 20px 0 10vh 0;
+}
+@media (max-width:1570px){
+    .quote h1{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+/* <===================HANDS===================> */
+
+.hands{
+    height: 120vh;
+    width: 100%;
+    
+    background-image: url('Images_IsaPaulin/isa_paulin (12).jpeg');
+    background-size: cover;
+    background-position-y: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+    /* <===================STAY===================> */
+#stay {
+  background-color: var(--grey-color);
+  padding: 5vh var(--horizontal-margin-spacing); /* reduzido de 10vh para 5vh */
+  width: 100%;
+}
+
+#stay h2 {
+  margin-bottom: 10vh; /* aproxima o título das colunas */
+  text-align: left; /* centraliza o título */
+}
+
+.stay-container {
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  gap: 70px;                 /* espaço entre colunas */
+  flex-wrap: wrap;           /* permite quebrar em linhas se o ecrã for pequeno */
+  text-align: center;        /* centraliza conteúdo dentro de cada coluna */
+  margin: 5vh 0;             /* reduzido de 20vh para 5vh */
+}
+
+.stay-item {
+  max-width: 300px;          /* controla largura de cada coluna */
+  margin-bottom: 40px;       /* espaço entre divisões */
+}
+
+.stay-item h3 {
+  margin-bottom: 10px;       /* espaço entre título e texto */
+}
+
+.stay-item .text {
+  margin: 10px 0;
+}
+
+.links {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.stay-icon img {
+  width: 50px;               /* tamanho do ícone */
+  height: auto;              /* mantém proporção */
+    filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
+  margin-bottom: 15px;       /* espaço entre ícone e título */
+}
+
+@media (max-width:1000px) {
+  .stay-container {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .stay-item {
+    margin: 2vh 0;
+  }
+}
+
+
+/* <===================REGISTRY===================> */
+
+#registry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* título e imagem começam alinhados */
+  padding: 5vh var(--horizontal-margin-spacing);
+  gap: 5vw; /* espaço entre texto e imagem */
+}
+
+.registry-container {
+  flex: 1; /* ocupa metade */
+  max-width: 40vw;
+}
+
+.registry-container h2 {
+  margin: 0 0 20px 0; /* remove margem-top automática */
+}
+
+.registry-container .text,
+.contacts li {
+  text-align: left;
+  margin: 10px 0;
+}
+
+#registry button {
+  display: block;
+  margin-top: 30px;
+  margin-inline: auto;
+}
+
+/* Imagem ao lado */
+.registry-img {
+  display: block;
+  height: 80vh;        /* reduz altura (antes 100vh) */
+  width: 35vw;         /* reduz largura (antes 40vw) */
+  background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg');
+  background-size: cover;       /* preenche a área */
+  background-position: center;  /* centrada */
+  background-repeat: no-repeat;
+  align-self: flex-start;       /* começa ao nível do título */
+}
+/* Responsivo */
+@media (max-width:1000px) {
+  #registry {
+    flex-direction: column;
+    align-items: center;
+  }
+  .registry-container {
+    max-width: 100%;
+    text-align: center;
+  }
+  .registry-img {
+    max-width: 100%;
+    height: 50vh; /* altura menor em mobile */
+    margin-top: 5vh;
+  }
+}
+
+
+/* <===================PARTING MESSAGE===================> */
+.parting-message h1{
+    margin-top: 10vh;
+    text-align: center;
+}
+.parting-message button{
+    margin:  10vh auto;
+}
+
+/* <===================FOOTER===================> */
+
+footer {
+  margin-top: 20vh;
+  height: fit-content;
+  width: 100%;
+  background-color: var(--grey-color);
+  padding: 10vh 30px;
+}
+
+footer h2 {
+  font-size: 2rem; /* corrigido */
+  font-weight: normal;
+}
+
+/* <===================COUNTDOWN===================> */
+
+
+
+.simply-countdown {
+  margin-bottom: 0em;
+  transform: translateX(0px);
+}
+
+.simply-countdown > .simply-section {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  background: rgba(140, 94, 60, 0.55);
+  margin: 0 6px;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 1s ease infinite;
+}
+
+.simply-countdown > .simply-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 130px;
+}
+
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 26px;
+}
+
+.simply-countdown > .simply-section .simply-word {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  color: white;
+  /* amounts and words */
+}
