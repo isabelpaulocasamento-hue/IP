@@ -348,16 +348,14 @@ h3 {
 /* <===================LAYOUT===================> */
 
 .v-reposition-container {
-    position: absolute;
-    left: 0;
-    width: 100vw;
+  position: relative;
+  width: 100%;
 }
 
 .h-reposition-container {
-    width: 100vw;
-    position: relative;
-    top: 0;
+  width: 100%;
 }
+
 /* <===================NAVBAR===================> */
 
 
@@ -823,6 +821,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
