@@ -65,11 +65,12 @@ html, body {
   }
 
   /* Flor no fundo mais pequena e sem deslocar */
-  body::before {
-    right: 0 !important;        /* elimina deslocamento negativo */
-    width: 150px !important;    /* reduz largura */
-    height: 120px !important;   /* reduz altura */
-    top: 20px !important;       /* ajusta posição */
+  .home::before {
+    right: 0 !important;        
+    width: 150px !important;    
+    height: 120px !important;   
+    top: 20px !important;       
+    transform: rotate(-10deg);  /* menos inclinação para mobile */
   }
 
   /* Link "Ver no mapa" maior e mais legível */
@@ -119,6 +120,12 @@ html, body {
   }
 }
 
+@media (max-width:480px) {
+  /* Esconde completamente a flor em ecrãs muito pequenos */
+  .home::before {
+    display: none;
+  }
+}
 
 /* Navbar */
 @media (max-width:1000px){
@@ -359,23 +366,6 @@ h3 {
 /* <===================NAVBAR===================> */
 
 
-/* Prevent the decorative flower from pushing the layout wider/taller */
-body::before {
-  content: "";
-  position: fixed;                 /* was absolute */
-  top: 80px;
-  right: 0;                        /* was -20px */
-  width: 400px;
-  height: 300px;
-  background: url('Images_IsaPaulin/complemento.png') no-repeat right top;
-  background-size: contain;
-  z-index: 1;
-  pointer-events: none;
-  filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
-  transform: rotate(-20deg);
-}
-
-
 label.logo{
     font-size: 35px;
     line-height: 80px;
@@ -418,7 +408,28 @@ a:hover{
 }
 
 
+
 /* <===================HOME===================> */
+
+.home::before {
+  content: "";
+  position: absolute; /* relative to .home */
+  top: 80px;
+  right: 0;
+  width: 400px;
+  height: 300px;
+  background: url('Images_IsaPaulin/complemento.png') no-repeat right top;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+  filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
+  transform: rotate(-20deg);
+}
+
+.home {
+  position: relative;
+}
+
 
 .container-out {
     margin-top: 10vh;
@@ -821,6 +832,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
