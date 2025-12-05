@@ -495,20 +495,19 @@ a:hover{
 
 /* <===================TIMELINE===================> */
 
-
 .timeline {
     display: block;
     background-color: rgba(30, 30, 30, 0.1); /* fundo escuro translúcido */
     color: #fff; /* texto claro para contraste */
     position: relative;
-    top: -10vh; /* sobreposição sobre a seção anterior */
+    top: 0; /* removed -10vh offset */
     width: 100%;
     backdrop-filter: blur(4px);
     padding: 8vh var(--horizontal-margin-spacing);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* leve sombra externa */
     border-radius: 8px;
     z-index: 1;
-    margin-bottom: -2vh; /* espaço para a próxima seção */
+    margin-bottom: 5vh; /* cleaner spacing instead of -2vh */
 }
 
 .timeline-container {
@@ -538,7 +537,8 @@ a:hover{
 
 .timeline-img {
     background-image: url('Images_IsaPaulin/isa_paulin (23).jpeg');
-    height: 70vh;
+    height: auto;        /* was 70vh */
+    min-height: 50vh;    /* ensures visibility without forcing scroll */
     width: 30vw;
     background-position: center;
     background-size: cover;
@@ -824,6 +824,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
