@@ -1,576 +1,262 @@
 /* <===================CSS VARIABLES===================> */
-
 :root {
+  --h1-size: 7rem;
+  --h2-size: 2.1rem;
+  --h3-size: 1.7rem;
+  --text-size: 1.3rem;
+  --horizontal-margin-spacing: 6rem;
 
-    --h1-size: 7rem;
-    --h2-size: 2.1rem;
-    --h3-size: 1.7rem;
-    --text-size: 1.3rem;
-    --horizontal-margin-spacing: 6rem;
-
-    /* Paleta extraída da imagem */
-   /* --verde-estrutura: #4b5a3a;*/
-   /* --castanho-vestido: #8c5e3c;*/
-   /* --rosa-shawl: #d8c4b4;*/
-    /*--pedra-clara: #e7e3dc;*/
-    /*--texto-escuro: #3f3f2f;*/
-    /*--branco-suave: #fdfaf5;*/
-
-
-    --h1cor: rgba(75, 90, 58, 1);/* verde musgo */
-    --h2cor: rgba(140, 94, 60, 1); /* castanho */
-    --h3cor: rgba(140, 94, 60, 1); /* castanho*/
-    --pedra-clara: rgba(231, 227, 220, 1); /* fundo claro */
-    --texto-escuro: rgba(63, 63, 47, 1);/* texto principal */
-    --botaocor: rgba(255, 255, 255, 1);  /* branco - letra do botao*/
---botaofundocor:rgba(140, 94, 60, 0.8); 
---cor-fundo-principal: rgba(231, 227, 220, 0.95)
-
+  --h1cor: rgba(75, 90, 58, 1);
+  --h2cor: rgba(140, 94, 60, 1);
+  --h3cor: rgba(140, 94, 60, 1);
+  --pedra-clara: rgba(231, 227, 220, 1);
+  --texto-escuro: rgba(63, 63, 47, 1);
+  --botaocor: rgba(255, 255, 255, 1);
+  --botaofundocor: rgba(140, 94, 60, 0.8);
+  --cor-fundo-principal: rgba(231, 227, 220, 0.95);
 }
 
-.icon-img {
-  width: 80px;
-  height: 80px;
-  margin-right: 0px;
-   filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
-}
+/* <===================IMPORTS===================> */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');
+
 /* <===================BASE===================> */
+html, body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* evita overflow horizontal que causa scroll extra */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
   background-image: url('Images_IsaPaulin/fundo.png');
-  background-size: cover;          /* was 100% 100% */
+  background-size: cover;
   background-repeat: repeat;
   background-position: center;
+  color: var(--texto-escuro);
+  font-family: 'Cinzel', serif;
 }
 
-
-/* ================= MOBILE FIXES ================= */
-
-/* Ensure the page itself doesn’t create extra scroll artifacts */
-html, body {
-  margin: 0;                       /* ensure no default margins */
+/* ensure images and background boxes never overflow */
+img, .gallery-img, .timeline-img, .registry-img, .home-img {
   max-width: 100%;
-  overflow-x: hidden;
+  height: auto;
+  box-sizing: border-box;
 }
 
-/* Ajustes gerais para mobile */
-@media (max-width:768px) {
-  .hz-margin {
-    padding: 0 1rem !important; /* margens menores */
-  }
-
-  .v-reposition-container,
-  .h-reposition-container {
-    width: 100% !important;     /* não usar 100vw */
-  }
-
-  /* Flor no fundo mais pequena e sem deslocar */
-  body::before {
-    right: 0 !important;        /* elimina deslocamento negativo */
-    width: 150px !important;    /* reduz largura */
-    height: 120px !important;   /* reduz altura */
-    top: 20px !important;       /* ajusta posição */
-  }
-
-  /* Link "Ver no mapa" maior e mais legível */
-  .location a {
-    font-size: 2rem;
-    padding: 12px 16px;
-    display: inline-block;
-  }
-
-  /* Forçar colunas a empilhar no mobile */
-  .container-out,
-  #registry,
-  .stay-container {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  /* Ajustar fontes para não ficarem gigantes */
-  h1 { font-size: 3rem; line-height: 3.5rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  .text { font-size: 1rem; }
-
-  /* Corrigir scroll duplo no home */
-  .home-img,
-  #home-img-lg {
-    height: auto !important;    /* não força altura fixa */
-    overflow: visible !important;
-    width: 100% !important;
-  }
-}
-
-@media (max-width:768px) {
-  .home-img-sm {
-    display: block !important;
-    width: 100%;
-    height: 50vh;                 /* altura fixa confortável */
-    background-size: cover;       /* cobre toda a área */
-    background-repeat: no-repeat; /* não repete */
-    background-position: center;  /* centrada */
-    background-attachment: fixed; /* fica estática ao fazer scroll */
-    margin-top: 20px;             /* aparece abaixo do texto */
-  }
-
-  #home-img-lg {
-    display: none !important;     /* esconde versão desktop */
-  }
-}
-
-
-/* Navbar */
-@media (max-width:1000px){
-    label.logo{
-        font-size: 20px;
-    }
-    nav ul li a{
-        font-size: 10px;
-    }
-    html{
-        font-size: 10px;
-    }
-}
-@media (max-width:570px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        backdrop-filter: blur(5px);
-        top: 80px;
-        font-weight: bold;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    a:hover, a.active{
-        background: none;
-        color: grey;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-}
-
-/* Timeline */
-@media (max-width:1000px) {
-    .timeline {
-        background-color: rgba(50, 50, 50, 0.95);
-        position: relative;
-        top: 0;
-        width: 100%;
-        backdrop-filter: blur(0);
-        height: fit-content;
-        box-shadow: none;
-        margin-bottom: 8vh;
-    }
-    .timeline-container {
-        flex-direction: column;
-    }
-    .timeline-img {
-        height: 50vh;
-        width: 100%;
-        margin-top: 2rem;
-    }
-    .timeline-container .text {
-        padding: 1rem 0;
-    }
-    .timeline-container.centered {
-        gap: 1.5rem;
-    }
-}
-
-/* Story */
-@media (max-width:1000px) {
-  .h-reposition-container {
-    position: relative;
-    top: 0;
-  }
-  #story {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #story h3,
-  #story p {
-    width: 90vw;
-    margin: 1rem auto;
-    font-size: var(--text-size);
-    line-height: var(--text-size);
-    text-align: center;
-  }
-}
-
-/* Gallery */
-@media (max-width:1000px) {
-  .gallery-img {
-    flex: 0 0 90vw;
-    height: 90vw;
-  }
-}
-
-/* Quote */
-@media (max-width:1570px){
-    .quote h1{
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-
-/* Stay */
-@media (max-width:1000px) {
-  .stay-container {
-    flex-direction: column;
-    margin: 10px 0;
-  }
-  .stay-item {
-    margin: 2vh 0;
-  }
-}
-
-/* Registry */
-@media (max-width:1000px) {
-  #registry {
-    flex-direction: column;
-    align-items: center;
-  }
-  .registry-container {
-    max-width: 100%;
-    text-align: center;
-  }
-  .registry-img {
-    max-width: 100%;
-    height: 50vh;
-    margin-top: 5vh;
-  }
-}
-
-/* <===================TYPOGRAPHY & FONTS===================> */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');
-
-/* <===================UNIVERSAL CSS===================> */
-
+/* <===================UNIVERSAL===================> */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Cinzel', serif;
-    color: var(--texto-escuro);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.hz-margin {
-    padding: 0 var(--horizontal-margin-spacing);
-}
-
-/* <===================HEADINGS===================> */
-
-h1 {
-    font-size: var(--h1-size);
-    font-weight: 500;
-    line-height: var(--h1-size);
-    color: var(--h1cor);
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: var(--h2-size);
-    font-weight: bold;
-    color: var(--h2cor);
-    letter-spacing: 0.5px;
-}
-
-h3 {
-    font-size: var(--h3-size);
-    font-weight: 500;
-    color: var(--h3cor);
-}
-
-/* <===================TEXT===================> */
-
-.text {
-    font-family: 'Quicksand', sans-serif;
-    font-size: var(--text-size);
-    line-height: 1.6;
-    color: var(--texto-escuro);
-}
-
-/* <===================BUTTONS===================> */
-
-.huge-btn {
-    display: block;
-    font-size: 1.3rem;
-    background-color: var(--botaofundocor);
-    color: var(--botaocor);
-    border: none;
-    padding: 25px 50px;
-    border-radius: 50px;
-    width: fit-content;
-    margin: 30px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.huge-btn:hover {
-    background-color: var(--castanho-vestido);
-    color: var(--branco-suave);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-/* <===================ANIMATIONS===================> */
-
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--texto-escuro);
 }
 
 /* <===================LAYOUT===================> */
-
 .v-reposition-container {
   position: relative;
   width: 100%;
 }
 
 .h-reposition-container {
+  position: relative;
   width: 100%;
 }
 
+/* make horizontal spacing responsive to avoid overflow on very wide screens */
+.timeline, #registry, #stay {
+  padding-left: clamp(1rem, 6vw, var(--horizontal-margin-spacing));
+  padding-right: clamp(1rem, 6vw, var(--horizontal-margin-spacing));
+}
+
 /* <===================NAVBAR===================> */
-
-
 /* Prevent the decorative flower from pushing the layout wider/taller */
 body::before {
   content: "";
-  position: fixed;                 /* was absolute */
+  position: fixed;
   top: 80px;
-  right: 0;                        /* was -20px */
-  width: 400px;
-  height: 300px;
+  right: 0;
+  width: min(400px, 40vw);    /* limita largura para não causar overflow */
+  height: min(300px, 30vh);
   background: url('Images_IsaPaulin/complemento.png') no-repeat right top;
   background-size: contain;
   z-index: 1;
   pointer-events: none;
   filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
   transform: rotate(-20deg);
+  transform-origin: right top;
+  clip-path: inset(0 0 0 0);  /* garante que nada "sai" do viewport */
 }
 
-
-label.logo{
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 0 0 30px;
-    font-weight: bold;
-color: rgba(75, 90, 58, 1); /* h1*/
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-    list-style: none;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-a:hover{
-    color: rgba(140, 94, 60, 1); 
-    transition: .5s;
-}
-.checkbtn{
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
+/* Navbar styles */
+label.logo {
+  font-size: 35px;
+  line-height: 80px;
+  padding-left: 30px;
+  font-weight: bold;
+  color: var(--h1cor);
 }
 
+nav ul {
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--h2cor);
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
 
 /* <===================HOME===================> */
-
 .container-out {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;              /* corrigido: antes 100vw */
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .home-img {
-    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
-    background-size: cover;   /* corrigido: antes 107% */
-    background-position: center;
-    height: auto;             /* evita scroll interno */
-    width: 100%;              /* ocupa largura sem criar barra extra */
-    overflow: visible;        /* não cria scroll próprio */
+  background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  overflow: visible;
 }
 
 .home-img-sm {
-    display: none;
-    width: 100%;
-    margin: 20px 0 0 0;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
+  display: none;
+  width: 100%;
+  margin: 20px 0 0 0;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
 }
 
 #home-img-lg {
-    display: block;
-    height: auto;             /* corrigido: antes 110vh */
-    min-height: 80vh;         /* altura mínima confortável */
-    width: 50%;               /* corrigido: antes 50vw */
-    background-position: center;
-    background-size: cover;
-    overflow: visible;        /* não cria scroll próprio */
-}
-
-.event-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 2rem;
-}
-
-.location {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-.location-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
-}
-
-.location a {
-  color: rgba(140, 94, 60, 1); /* castanho */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.location a:hover {
-  text-decoration: underline;
+  display: block;
+  height: auto;
+  min-height: 80vh;
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+  overflow: visible;
 }
 
 /* <===================TIMELINE===================> */
-
 .timeline {
-    display: block;
-    background-color: rgba(30, 30, 30, 0.1); /* fundo escuro translúcido */
-    color: #fff; /* texto claro para contraste */
-    position: relative;
-    top: 0; /* removed -10vh offset */
-    width: 100%;
-    backdrop-filter: blur(4px);
-    padding: 8vh var(--horizontal-margin-spacing);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* leve sombra externa */
-    border-radius: 8px;
-    z-index: 1;
-    margin-bottom: 5vh; /* cleaner spacing instead of -2vh */
+  display: block;
+  background-color: rgba(30, 30, 30, 0.1);
+  color: #fff;
+  position: relative;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1;
+  margin-bottom: 5vh;
+  /* horizontal padding handled above with clamp() */
 }
 
 .timeline-container {
-    display: flex;
-    flex-direction: row;
-    margin: 8vh 0;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin: 8vh 0;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .timeline-container.centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
 }
 
 .timeline-container.centered .huge-btn {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .simply-countdown-one {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .timeline-img {
-    background-image: url('Images_IsaPaulin/isa_paulin (23).jpeg');
-    height: auto;        /* was 70vh */
-    min-height: 50vh;    /* ensures visibility without forcing scroll */
-    width: 30vw;
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
+  background-image: url('Images_IsaPaulin/isa_paulin (23).jpeg');
+  height: auto;
+  min-height: 50vh;
+  width: 30vw;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  max-width: 100%;
 }
 
 .timings {
-    margin: 30px;
-    flex: 1;
+  margin: 30px;
+  flex: 1;
 }
 
 .timeline-container .text {
-    padding: 1rem 2rem 1rem 0;
-    line-height: 1.6;
-    font-size: 1rem;
+  padding: 1rem 2rem 1rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-
 /* <===================STORY===================> */
-
 #story {
   display: flex;
-  flex-direction: column;     /* empilha os elementos verticalmente */
-  align-items: center;        /* centraliza horizontalmente */
-  text-align: center;         /* centraliza o conteúdo textual */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding-top: 10vh;
-  margin: 0vh 0;
+  margin: 0;
 }
 
 #story h3,
 #story p {
-  width: 80vw;                /* largura confortável para leitura */
-  margin: 1rem auto;          /* centraliza o bloco */
-  text-align: center;         /* centraliza o texto */
+  width: 80vw;
+  margin: 1rem auto;
+  text-align: center;
   font-size: var(--h3-size);
   line-height: var(--h3-size);
 }
-
 
 /* <===================GALLERY===================> */
 .gallery-wrapper {
@@ -584,6 +270,7 @@ a:hover{
   display: flex;
   transition: transform 0.5s ease;
   gap: 20px;
+  flex-wrap: wrap; /* evita overflow horizontal em ecrãs largos */
 }
 
 .gallery-img {
@@ -592,8 +279,10 @@ a:hover{
   background-size: cover;
   background-position: center;
   border-radius: 8px;
+  max-width: 100%;
 }
 
+/* gallery buttons */
 .gallery-btn {
   position: absolute;
   top: 50%;
@@ -607,109 +296,93 @@ a:hover{
   z-index: 2;
 }
 
-.gallery-btn.prev {
-  left: 10px;
+.gallery-btn.prev { left: 10px; }
+.gallery-btn.next { right: 10px; }
+
+/* <===================QUOTE===================> */
+.quote {
+  margin: 10vh 0;
 }
 
-.gallery-btn.next {
-  right: 10px;
+.quote h1 {
+  width: 55vw;
+  font-size: 4rem;
+  text-align: center;
+  margin: auto;
 }
-/* <===================QUOTE===================> */
-.quote{
-    margin: 10vh 0;
-}
-.quote h1{
-    width: 55vw;
-    font-size: 4rem;
-    text-align: center;
-    margin: auto;
-}
-.author{
-    text-align: center;
-    margin: 20px 0 10vh 0;
+
+.author {
+  text-align: center;
+  margin: 20px 0 10vh 0;
 }
 
 /* <===================HANDS===================> */
-css
 /* Avoid forcing extra vertical scroll */
 .hands {
-  height: auto;                    /* was 120vh */
+  height: auto;
   min-height: 100vh;
   width: 100%;
   background-image: url('Images_IsaPaulin/isa_paulin (12).jpeg');
   background-size: cover;
   background-position-y: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* se causar problemas em algum browser, trocar para scroll */
   background-repeat: no-repeat;
 }
 
-
-    /* <===================STAY===================> */
+/* <===================STAY===================> */
 #stay {
-  background-color: var(--grey-color);
-  padding: 5vh var(--horizontal-margin-spacing); /* reduzido de 10vh para 5vh */
+  background-color: var(--pedra-clara);
+  padding: 5vh var(--horizontal-margin-spacing);
   width: 100%;
 }
 
 #stay h2 {
-  margin-bottom: 10vh; /* aproxima o título das colunas */
-  text-align: left; /* centraliza o título */
+  margin-bottom: 10vh;
+  text-align: left;
 }
 
 .stay-container {
   display: flex;
-  justify-content: center;   /* centraliza horizontalmente */
-  gap: 70px;                 /* espaço entre colunas */
-  flex-wrap: wrap;           /* permite quebrar em linhas se o ecrã for pequeno */
-  text-align: center;        /* centraliza conteúdo dentro de cada coluna */
-  margin: 5vh 0;             /* reduzido de 20vh para 5vh */
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 5vh 0;
 }
 
 .stay-item {
-  max-width: 300px;          /* controla largura de cada coluna */
-  margin-bottom: 40px;       /* espaço entre divisões */
+  max-width: 300px;
+  margin-bottom: 40px;
 }
 
-.stay-item h3 {
-  margin-bottom: 10px;       /* espaço entre título e texto */
-}
+.stay-item h3 { margin-bottom: 10px; }
+.stay-item .text { margin: 10px 0; }
 
-.stay-item .text {
-  margin: 10px 0;
-}
-
-.links {
-  cursor: pointer;
-  text-decoration: underline;
-}
+.links { cursor: pointer; text-decoration: underline; }
 
 .stay-icon img {
-  width: 50px;               /* tamanho do ícone */
-  height: auto;              /* mantém proporção */
-    filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
-  margin-bottom: 15px;       /* espaço entre ícone e título */
+  width: 50px;
+  height: auto;
+  filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
+  margin-bottom: 15px;
 }
 
-
 /* <===================REGISTRY===================> */
-
 #registry {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start; /* título e imagem começam alinhados */
+  align-items: flex-start;
   padding: 5vh var(--horizontal-margin-spacing);
-  gap: 5vw; /* espaço entre texto e imagem */
+  gap: 5vw;
 }
 
 .registry-container {
-  flex: 1; /* ocupa metade */
+  flex: 1;
   max-width: 40vw;
 }
 
-.registry-container h2 {
-  margin: 0 0 20px 0; /* remove margem-top automática */
-}
+.registry-container h2 { margin: 0 0 20px 0; }
 
 .registry-container .text,
 .contacts li {
@@ -723,10 +396,9 @@ css
   margin-inline: auto;
 }
 
-/* Imagem ao lado */
 .registry-img {
   display: block;
-  height: auto;                    /* was 80vh */
+  height: auto;
   min-height: 60vh;
   width: 35vw;
   background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg');
@@ -734,41 +406,26 @@ css
   background-position: center;
   background-repeat: no-repeat;
   align-self: flex-start;
+  max-width: 100%;
 }
-
 
 /* <===================PARTING MESSAGE===================> */
-.parting-message h1{
-    margin-top: 10vh;
-    text-align: center;
-}
-.parting-message button{
-    margin:  10vh auto;
-}
+.parting-message h1 { margin-top: 10vh; text-align: center; }
+.parting-message button { margin: 10vh auto; }
 
 /* <===================FOOTER===================> */
-
 footer {
   margin-top: 20vh;
   height: fit-content;
   width: 100%;
-  background-color: var(--grey-color);
+  background-color: var(--pedra-clara);
   padding: 10vh 30px;
 }
 
-footer h2 {
-  font-size: 2rem; /* corrigido */
-  font-weight: normal;
-}
+footer h2 { font-size: 2rem; font-weight: normal; }
 
 /* <===================COUNTDOWN===================> */
-
-
-
-.simply-countdown {
-  margin-bottom: 0em;
-  transform: translateX(0px);
-}
+.simply-countdown { margin-bottom: 0em; transform: translateX(0px); }
 
 .simply-countdown > .simply-section {
   display: inline-block;
@@ -790,11 +447,7 @@ footer h2 {
   width: 130px;
 }
 
-
-.simply-countdown > .simply-section .simply-amount {
-  font-size: 26px;
-}
-
+.simply-countdown > .simply-section .simply-amount { font-size: 26px; }
 .simply-countdown > .simply-section .simply-word {
   font-size: 15px;
   color: rgba(255, 255, 255, 1);
@@ -802,33 +455,42 @@ footer h2 {
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
-  display: block;
-  color: white;
-  /* amounts and words */
-
+/* Utility: responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+  .timeline-container { flex-direction: column; }
+  .timeline-img { height: 50vh; width: 100%; margin-top: 2rem; }
+  .gallery-img { flex: 0 0 90vw; height: 90vw; }
+  .registry-img { max-width: 100%; height: 50vh; margin-top: 5vh; width: 100%; }
+  .h-reposition-container { position: relative; top: 0; width: 100%; }
+  .container-out, #registry, .stay-container { flex-direction: column; width: 100%; }
+  h1 { font-size: 3rem; line-height: 3.5rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  .text { font-size: 1rem; }
 }
 
-
-
-
-
-
-
-
-
-
-
+/* Mobile menu behavior */
+@media (max-width: 570px) {
+  .checkbtn { display: block; }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    overflow-y: auto;
+  }
+  nav ul li { display: block; margin: 50px 0; line-height: 30px; }
+  nav ul li a { font-size: 20px; }
+  #check:checked ~ ul { left: 0; }
+  /* prevent page scroll while menu open */
+  #check:checked ~ html, #check:checked ~ body { overflow: hidden; }
+}
