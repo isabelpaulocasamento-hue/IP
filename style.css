@@ -38,7 +38,7 @@
 
 body {
   background-image: url('Images_IsaPaulin/fundo.png');
-  background-size: 100% 100%;   /* força a ocupar largura e altura */
+  background-size: cover;          /* was 100% 100% */
   background-repeat: repeat;
   background-position: center;
 }
@@ -46,9 +46,11 @@ body {
 
 /* ================= MOBILE FIXES ================= */
 
+/* Ensure the page itself doesn’t create extra scroll artifacts */
 html, body {
-  overflow-x: hidden;   /* bloqueia scroll lateral */
-  max-width: 100%;      /* impede ultrapassar largura */
+  margin: 0;                       /* ensure no default margins */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Ajustes gerais para mobile */
@@ -359,28 +361,22 @@ h3 {
 /* <===================NAVBAR===================> */
 
 
+/* Prevent the decorative flower from pushing the layout wider/taller */
 body::before {
   content: "";
-  position: absolute;
-  top: 80px;              /* move para baixo */
-  right: -20px;            /* afasta da margem direita */
+  position: fixed;                 /* was absolute */
+  top: 80px;
+  right: 0;                        /* was -20px */
   width: 400px;
   height: 300px;
   background: url('Images_IsaPaulin/complemento.png') no-repeat right top;
   background-size: contain;
   z-index: 1;
   pointer-events: none;
-
-  /* filtro castanho */
   filter: invert(23%) sepia(45%) saturate(500%) hue-rotate(340deg) brightness(70%);
+  transform: rotate(-20deg);
+}
 
-  /* rotação leve */
-  transform: rotate(-20deg); /* negativo roda para a esquerda, positivo para a direita */
-}
-nav {
-  position: relative;
-  z-index: 2;
-}
 
 label.logo{
     font-size: 35px;
@@ -636,17 +632,19 @@ a:hover{
 }
 
 /* <===================HANDS===================> */
-
-.hands{
-    height: 120vh;
-    width: 100%;
-    
-    background-image: url('Images_IsaPaulin/isa_paulin (12).jpeg');
-    background-size: cover;
-    background-position-y: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+css
+/* Avoid forcing extra vertical scroll */
+.hands {
+  height: auto;                    /* was 120vh */
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('Images_IsaPaulin/isa_paulin (12).jpeg');
+  background-size: cover;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+
 
     /* <===================STAY===================> */
 #stay {
@@ -730,13 +728,14 @@ a:hover{
 /* Imagem ao lado */
 .registry-img {
   display: block;
-  height: 80vh;        /* reduz altura (antes 100vh) */
-  width: 35vw;         /* reduz largura (antes 40vw) */
+  height: auto;                    /* was 80vh */
+  min-height: 60vh;
+  width: 35vw;
   background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg');
-  background-size: cover;       /* preenche a área */
-  background-position: center;  /* centrada */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  align-self: flex-start;       /* começa ao nível do título */
+  align-self: flex-start;
 }
 
 
@@ -824,6 +823,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
