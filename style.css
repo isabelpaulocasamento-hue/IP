@@ -120,12 +120,12 @@ html, body {
   }
 }
 
-@media (max-width:480px) {
+/*@media (max-width:480px) {
   /* Esconde completamente a flor em ecrãs muito pequenos */
   .home::before {
     display: none;
   }
-}
+}*/
 
 /* Navbar */
 @media (max-width:1000px){
@@ -832,6 +832,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
