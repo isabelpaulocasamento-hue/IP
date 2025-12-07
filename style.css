@@ -432,7 +432,7 @@ a:hover{
 .home::before {
   content: "";
   position: absolute; /* relative to .home */
-  top: 80px;
+  top: 40px;
   right: 0;
   width: 400px;
   height: 300px;
@@ -850,6 +850,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
