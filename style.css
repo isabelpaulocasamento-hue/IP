@@ -755,9 +755,9 @@ css
 /* Imagem ao lado */
 .registry-img {
   display: block;
-  height: auto;                    /* was 80vh */
-  min-height: 60vh;
-  width: 35vw;
+  height: auto;                    
+  min-height: 75vh;
+  width: 45vw;
   background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg');
   background-size: cover;
   background-position: center;
@@ -850,6 +850,7 @@ footer h2 {
   /* amounts and words */
 
 }
+
 
 
 
