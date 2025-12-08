@@ -621,7 +621,7 @@ footer h2 {
   }
 
   /* Fontes menores */
-  h1 { font-size: 2.4rem; line-height: 2.8rem; } /* reduzido */
+  h1 { font-size: 2.4rem; line-height: 2.8rem; }
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.1rem; }
   .text { font-size: 0.95rem; }
@@ -631,21 +631,19 @@ footer h2 {
     display: block !important;
     width: 100%;
     height: 50vh;
-    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg'); /* foto inicial */
+    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: scroll; /* seguro em mobile */
+    background-attachment: scroll;
     margin-top: 20px;
   }
 
-  #home-img-lg {
-    display: none !important;
-  }
+  #home-img-lg { display: none !important; }
 
   /* Link "Ver no mapa" menor */
   .location a {
-    font-size: 1.5rem; /* reduzido */
+    font-size: 1.5rem;
     padding: 10px 14px;
     display: inline-block;
   }
@@ -661,9 +659,7 @@ footer h2 {
     z-index: 1000;
   }
 
-  .checkbtn i {
-    color: var(--texto-escuro);
-  }
+  .checkbtn i { color: var(--texto-escuro); }
 
   ul {
     position: fixed;
@@ -675,8 +671,8 @@ footer h2 {
     transition: all .5s;
     z-index: 999;
     font-weight: bold;
-    backdrop-filter: blur(6px); /* layer transparente */
-    background-color: rgba(0,0,0,0.4); /* escurece fundo */
+    backdrop-filter: blur(6px);
+    background-color: rgba(0,0,0,0.4);
   }
 
   nav ul li {
@@ -687,21 +683,45 @@ footer h2 {
 
   nav ul li a {
     font-size: 20px;
-    color: white; /* contraste melhor */
+    color: white;
   }
 
-  #check:checked ~ ul {
-    left: 0;
-  }
+  #check:checked ~ ul { left: 0; }
 
-  /* Story texto mais legível */
+  /* Story texto centrado */
+  #story {
+    text-align: center;
+  }
   #story h3,
   #story p {
     width: 90vw;
     margin: 1rem auto;
-    font-size: 1rem; /* ligeiramente menor */
+    font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+  }
+
+  /* Botão confirmar mais largo */
+  .huge-btn {
+    font-size: 1.2rem;
+    padding: 20px;
+    width: 90%;          /* ocupa quase toda a largura */
+    max-width: 400px;    /* limite para não ficar gigante */
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  /* Countdown horizontal (2x2) */
+  .simply-countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .simply-countdown > .simply-section {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
   }
 
   /* Registry ajustes */
@@ -721,10 +741,14 @@ footer h2 {
     margin-bottom: 1rem;
   }
 
+  .registry-container p.text {
+    margin-bottom: 1rem;
+  }
+
   .contacts {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0; /* logo abaixo do texto */
   }
 
   .contacts li {
@@ -734,10 +758,10 @@ footer h2 {
   }
 
   .registry-img {
-    width: 95%;          /* ocupa quase todo o ecrã */
-    height: 65vh;        /* maior */
+    width: 95%;
+    height: 65vh;
     min-height: 300px;
-    margin: 0 auto;      /* centralizada */
+    margin: 0 auto;
     border-radius: 8px;
   }
 
@@ -749,7 +773,6 @@ footer h2 {
 }
 
 @media (max-width:480px) {
-  /* Flor ainda mais pequena */
   .home::before {
     width: 100px;
     height: 80px;
@@ -758,7 +781,6 @@ footer h2 {
     transform: rotate(-5deg);
   }
 
-  /* h1 ainda menor */
   h1 {
     font-size: 2rem;
     line-height: 2.4rem;
