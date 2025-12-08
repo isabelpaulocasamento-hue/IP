@@ -608,8 +608,9 @@ footer h2 {
 
 }
 
-/* <===================MOBILE===================> */
 
+
+/* <===================MOBILE===================> */
 
 @media (max-width:768px) {
 
@@ -698,13 +699,14 @@ footer h2 {
     color: white;
   }
 
-  /* Story texto centralizado */
+  /* Story texto centralizado e sem corte */
   #story h3 {
-    width: 90vw;
+    width: 95%;               /* ocupa quase toda a largura */
     margin: 1rem auto;
     text-align: center;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;      /* mais espaçamento */
+    word-wrap: break-word;    /* evita corte de palavras longas */
   }
 
   /* Botão confirmar mais largo */
@@ -726,8 +728,9 @@ footer h2 {
   }
 
   .simply-countdown > .simply-section {
-    width: 100px;
-    height: 100px;
+    flex: 0 0 45%;            /* 2 por linha */
+    max-width: 120px;
+    height: 120px;
     margin: 5px;
   }
 
@@ -755,7 +758,7 @@ footer h2 {
   .contacts {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem 0; /* logo abaixo do texto */
   }
 
   .contacts li {
