@@ -43,249 +43,6 @@ body {
   background-position: center;
 }
 
-
-/* ================= MOBILE ================= */
-
-/* Evitar scroll horizontal extra */
-html, body {
-  margin: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Ajustes gerais para mobile */
-@media (max-width:768px) {
-  .hz-margin {
-    padding: 0 1rem !important;
-  }
-
-  .v-reposition-container,
-  .h-reposition-container {
-    width: 100% !important;
-  }
-
-  /* Flor ajustada para mobile */
-  .home::before {
-    right: 0 !important;
-    width: 150px !important;
-    height: 120px !important;
-    top: 20px !important;
-    transform: rotate(-10deg);
-  }
-
-  /* Link "Ver no mapa" maior */
-  .location a {
-    font-size: 2rem;
-    padding: 12px 16px;
-    display: inline-block;
-  }
-
-  /* Colunas empilhadas */
-  .container-out,
-  #registry,
-  .stay-container {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  /* Fontes menores */
-  h1 { font-size: 3rem; line-height: 3.5rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  .text { font-size: 1rem; }
-
-  /* Corrigir scroll duplo */
-  .home-img,
-  #home-img-lg {
-    height: auto !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  /* Mostrar imagem mobile */
-  .home-img-sm {
-    display: block !important;
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin-top: 20px;
-  }
-
-  #home-img-lg {
-    display: none !important;
-  }
-
-  /* Navbar hamburguer visível até 768px */
-  .checkbtn { 
-    display: block; 
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(5px);
-    top: 80px;
-    font-weight: bold;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  a:hover, a.active {
-    background: none;
-    color: grey;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-
-  /* Countdown menor em mobile */
-  .simply-countdown > .simply-section {
-    width: 100px;
-    height: 100px;
-  }
-
-  .simply-countdown > .simply-section > div {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Botão confirmar maior em mobile */
-  .huge-btn {
-    font-size: 1.5rem;
-    padding: 30px 60px;
-  }
-}
-
-@media (max-width:480px) {
-  /* Flor ainda mais pequena mas visível */
-  .home::before {
-    width: 100px;
-    height: 80px;
-    top: 10px;
-    right: 5px;
-    transform: rotate(-5deg);
-  }
-}
-
-/* Timeline */
-@media (max-width:1000px) {
-  .timeline {
-    background-color: rgba(50, 50, 50, 0.95);
-    position: relative;
-    top: 0;
-    width: 100%;
-    backdrop-filter: blur(0);
-    height: fit-content;
-    box-shadow: none;
-    margin-bottom: 8vh;
-  }
-  .timeline-container {
-    flex-direction: column;
-  }
-  .timeline-img {
-    height: 50vh;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  .timeline-container .text {
-    padding: 1rem 0;
-  }
-  .timeline-container.centered {
-    gap: 1.5rem;
-  }
-}
-
-/* Story */
-@media (max-width:1000px) {
-  .h-reposition-container {
-    position: relative;
-    top: 0;
-  }
-  #story {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #story h3,
-  #story p {
-    width: 90vw;
-    margin: 1rem auto;
-    font-size: var(--text-size);
-    line-height: var(--text-size);
-    text-align: center;
-  }
-}
-
-/* Gallery */
-@media (max-width:1000px) {
-  .gallery-img {
-    flex: 0 0 90vw;
-    height: 90vw;
-  }
-}
-
-/* Quote */
-@media (max-width:1570px){
-  .quote h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-}
-
-/* Stay */
-@media (max-width:1000px) {
-  .stay-container {
-    flex-direction: column;
-    margin: 10px 0;
-  }
-  .stay-item {
-    margin: 2vh 0;
-  }
-}
-
-/* Registry */
-@media (max-width:1000px) {
-  #registry {
-    flex-direction: column;
-    align-items: center;
-  }
-  .registry-container {
-    max-width: 100%;
-    text-align: center;
-  }
-  .registry-img {
-    max-width: 100%;
-    height: 50vh;
-    margin-top: 5vh;
-  }
-}
-
-
-/* <===================TYPOGRAPHY & FONTS===================> */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');
-
 /* <===================UNIVERSAL CSS===================> */
 
 * {
@@ -851,6 +608,183 @@ footer h2 {
 
 }
 
+/* ================= MOBILE ================= */
+
+/* Evitar scroll horizontal extra */
+html, body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ajustes gerais para mobile */
+@media (max-width:768px) {
+  .hz-margin {
+    padding: 0 1rem !important;
+  }
+
+  .v-reposition-container,
+  .h-reposition-container {
+    width: 100% !important;
+  }
+
+  /* Flor ajustada para mobile */
+  .home::before {
+    right: 0 !important;
+    width: 150px !important;
+    height: 120px !important;
+    top: 30px !important; /* mais afastada do título */
+    transform: rotate(-10deg);
+  }
+
+  /* Link "Ver no mapa" maior */
+  .location a {
+    font-size: 2rem;
+    padding: 12px 16px;
+    display: inline-block;
+  }
+
+  /* Colunas empilhadas */
+  .container-out,
+  #registry,
+  .stay-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Fontes menores */
+  h1 { font-size: 2.6rem; line-height: 3rem; } /* reduzido */
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  .text { font-size: 1rem; }
+
+  /* Corrigir scroll duplo */
+  .home-img,
+  #home-img-lg {
+    height: auto !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  /* Mostrar imagem mobile */
+  .home-img-sm {
+    display: block !important;
+    width: 100%;
+    height: 50vh;
+    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg'); /* adicionada */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll; /* mais seguro em mobile */
+    margin-top: 20px;
+  }
+
+  #home-img-lg {
+    display: none !important;
+  }
+
+  /* Navbar hamburguer visível até 768px */
+  .checkbtn { 
+    display: block; 
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .checkbtn i {
+    color: var(--texto-escuro); /* garante visibilidade */
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    top: 0; /* cobre toda a tela */
+    font-weight: bold;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 999;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover, a.active {
+    background: none;
+    color: grey;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  /* Countdown menor em mobile */
+  .simply-countdown > .simply-section {
+    width: 100px;
+    height: 100px;
+  }
+
+  .simply-countdown > .simply-section > div {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Botão confirmar maior em mobile */
+  .huge-btn {
+    font-size: 1.5rem;
+    padding: 30px 60px;
+  }
+
+  /* Registry ajustado */
+  #registry {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh; /* espaço entre texto e imagem */
+  }
+
+  .registry-container {
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 3vh;
+  }
+
+  .registry-img {
+    width: 90%;
+    height: 60vh; /* maior para não cortar */
+    min-height: 300px;
+    margin-top: 0;
+    border-radius: 8px; /* opcional */
+  }
+}
+
+@media (max-width:480px) {
+  /* Flor ainda mais pequena mas visível */
+  .home::before {
+    width: 100px;
+    height: 80px;
+    top: 15px;
+    right: 5px;
+    transform: rotate(-5deg);
+  }
+
+  /* h1 ainda menor em ecrãs muito pequenos */
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+}
 
 
 
