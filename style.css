@@ -700,12 +700,12 @@ footer h2 {
 
   /* Story texto centralizado e sem corte */
   #story h3 {
-    width: 95%;               /* ocupa quase toda a largura */
+    width: 95vw;
     margin: 1rem auto;
     text-align: center;
     font-size: 1rem;
-    line-height: 1.6rem;      /* mais espaçamento */
-    word-wrap: break-word;    /* evita corte de palavras longas */
+    line-height: 1.6rem;
+    word-wrap: break-word;
   }
 
   /* Botão confirmar mais largo */
@@ -754,30 +754,42 @@ footer h2 {
     margin-bottom: 1rem;
   }
 
-  .contacts {
+  /*.contacts {
     list-style: none;
     padding: 0;
     margin: 0 0 1rem 0; /* logo abaixo do texto */
-  }
+  }*/
 
-  .contacts li {
+ /* .contacts li {
     font-size: 1rem;
     text-align: center;
     margin: 0.5rem 0;
-  }
+  }*/
+    
 
   /* Imagem por baixo dos contactos */
-  .registry-img {
-    width: 95%;
-    height: 65vh;
-    margin: 0 auto;
-    border-radius: 8px;
-  }
+.registry-img {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg'); /* usa a foto do registry */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  margin-top: 20px;
+}
+
 
   #registry button {
     margin-top: 3vh;
     margin-inline: auto;
     display: block;
+  }
+}
+@media (max-width:768px) {
+  .contacts {
+    display: none !important;
   }
 }
 
@@ -795,3 +807,4 @@ footer h2 {
     transform: rotate(-5deg);
   }
 }
+
