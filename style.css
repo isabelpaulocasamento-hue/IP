@@ -609,73 +609,33 @@ footer h2 {
 }
 
 /* ================= MOBILE ================= */
-
-/* Evitar scroll horizontal extra */
-html, body {
-  margin: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Ajustes gerais para mobile */
 @media (max-width:768px) {
-  .hz-margin {
-    padding: 0 1rem !important;
-  }
 
-  .v-reposition-container,
-  .h-reposition-container {
-    width: 100% !important;
-  }
-
-  /* Flor ajustada para mobile */
+  /* Flor ajustada */
   .home::before {
     right: 0 !important;
     width: 150px !important;
     height: 120px !important;
-    top: 30px !important; /* mais afastada do título */
+    top: 30px !important;
     transform: rotate(-10deg);
   }
 
-  /* Link "Ver no mapa" maior */
-  .location a {
-    font-size: 2rem;
-    padding: 12px 16px;
-    display: inline-block;
-  }
-
-  /* Colunas empilhadas */
-  .container-out,
-  #registry,
-  .stay-container {
-    flex-direction: column;
-    width: 100%;
-  }
-
   /* Fontes menores */
-  h1 { font-size: 2.6rem; line-height: 3rem; } /* reduzido */
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  .text { font-size: 1rem; }
+  h1 { font-size: 2.4rem; line-height: 2.8rem; } /* reduzido */
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem; }
+  .text { font-size: 0.95rem; }
 
-  /* Corrigir scroll duplo */
-  .home-img,
-  #home-img-lg {
-    height: auto !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  /* Mostrar imagem mobile */
+  /* Mostrar imagem inicial abaixo do título */
   .home-img-sm {
     display: block !important;
     width: 100%;
     height: 50vh;
-    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg'); /* adicionada */
+    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg'); /* foto inicial */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: scroll; /* mais seguro em mobile */
+    background-attachment: scroll; /* seguro em mobile */
     margin-top: 20px;
   }
 
@@ -683,7 +643,14 @@ html, body {
     display: none !important;
   }
 
-  /* Navbar hamburguer visível até 768px */
+  /* Link "Ver no mapa" menor */
+  .location a {
+    font-size: 1.5rem; /* reduzido */
+    padding: 10px 14px;
+    display: inline-block;
+  }
+
+  /* Navbar hamburguer */
   .checkbtn { 
     display: block; 
     font-size: 30px;
@@ -695,20 +662,21 @@ html, body {
   }
 
   .checkbtn i {
-    color: var(--texto-escuro); /* garante visibilidade */
+    color: var(--texto-escuro);
   }
 
   ul {
     position: fixed;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(5px);
-    top: 0; /* cobre toda a tela */
-    font-weight: bold;
+    top: 0;
     left: -100%;
     text-align: center;
     transition: all .5s;
     z-index: 999;
+    font-weight: bold;
+    backdrop-filter: blur(6px); /* layer transparente */
+    background-color: rgba(0,0,0,0.4); /* escurece fundo */
   }
 
   nav ul li {
@@ -719,58 +687,69 @@ html, body {
 
   nav ul li a {
     font-size: 20px;
-  }
-
-  a:hover, a.active {
-    background: none;
-    color: grey;
+    color: white; /* contraste melhor */
   }
 
   #check:checked ~ ul {
     left: 0;
   }
 
-  /* Countdown menor em mobile */
-  .simply-countdown > .simply-section {
-    width: 100px;
-    height: 100px;
+  /* Story texto mais legível */
+  #story h3,
+  #story p {
+    width: 90vw;
+    margin: 1rem auto;
+    font-size: 1rem; /* ligeiramente menor */
+    line-height: 1.5rem;
+    text-align: center;
   }
 
-  .simply-countdown > .simply-section > div {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Botão confirmar maior em mobile */
-  .huge-btn {
-    font-size: 1.5rem;
-    padding: 30px 60px;
-  }
-
-  /* Registry ajustado */
+  /* Registry ajustes */
   #registry {
     flex-direction: column;
     align-items: center;
-    gap: 4vh; /* espaço entre texto e imagem */
+    gap: 4vh;
   }
 
   .registry-container {
     max-width: 90%;
     text-align: center;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
+  }
+
+  .registry-container h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contacts {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .contacts li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .registry-img {
-    width: 90%;
-    height: 60vh; /* maior para não cortar */
+    width: 95%;          /* ocupa quase todo o ecrã */
+    height: 65vh;        /* maior */
     min-height: 300px;
-    margin-top: 0;
-    border-radius: 8px; /* opcional */
+    margin: 0 auto;      /* centralizada */
+    border-radius: 8px;
+  }
+
+  #registry button {
+    margin-top: 3vh;
+    margin-inline: auto;
+    display: block;
   }
 }
 
 @media (max-width:480px) {
-  /* Flor ainda mais pequena mas visível */
+  /* Flor ainda mais pequena */
   .home::before {
     width: 100px;
     height: 80px;
@@ -779,25 +758,9 @@ html, body {
     transform: rotate(-5deg);
   }
 
-  /* h1 ainda menor em ecrãs muito pequenos */
+  /* h1 ainda menor */
   h1 {
-    font-size: 2.2rem;
-    line-height: 2.6rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
