@@ -808,3 +808,16 @@ footer h2 {
   }
 }
 
+@media (max-width:768px) {
+  .simply-countdown > .simply-section {
+    display: flex !important;
+  }
+}
+@media (max-width:768px) {
+  .hz-margin {
+    padding: 0 1rem !important;
+  }
+}
+
+
+
