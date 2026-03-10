@@ -718,19 +718,41 @@ footer h2 {
     text-align: center;
   }
 
-  /* Countdown horizontal (2x2) */
+  /* Remover padding gigante da .hz-margin */
+  .hz-margin {
+    padding: 0 1rem !important;
+  }
+
+  /* COUNTDOWN — versão horizontal */
   .simply-countdown {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-direction: row !important;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
   }
 
   .simply-countdown > .simply-section {
-    flex: 0 0 45%;            /* 2 por linha */
-    max-width: 120px;
-    height: 120px;
-    margin: 5px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    margin: 0;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 22px;
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 12px;
   }
 
   /* Registry ajustes */
@@ -754,32 +776,18 @@ footer h2 {
     margin-bottom: 1rem;
   }
 
-  /*.contacts {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0; /* logo abaixo do texto */
-  }*/
-
- /* .contacts li {
-    font-size: 1rem;
-    text-align: center;
-    margin: 0.5rem 0;
-  }*/
-    
-
   /* Imagem por baixo dos contactos */
-.registry-img {
-  display: block;
-  width: 100%;
-  height: 50vh;
-  background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg'); /* usa a foto do registry */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  margin-top: 20px;
-}
-
+  .registry-img {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    background-image: url('Images_IsaPaulin/isa_paulin (2).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin-top: 20px;
+  }
 
   #registry button {
     margin-top: 3vh;
@@ -787,12 +795,15 @@ footer h2 {
     display: block;
   }
 }
+
+/* Esconder contactos no mobile */
 @media (max-width:768px) {
   .contacts {
     display: none !important;
   }
 }
 
+/* Ajustes extra para ecrãs muito pequenos */
 @media (max-width:480px) {
   h1 {
     font-size: 2rem;
@@ -808,16 +819,7 @@ footer h2 {
   }
 }
 
-@media (max-width:768px) {
-  .simply-countdown > .simply-section {
-    display: flex !important;
-  }
-}
-@media (max-width:768px) {
-  .hz-margin {
-    padding: 0 1rem !important;
-  }
-}
+
 
 
 
