@@ -652,7 +652,7 @@ footer h2 {
   }
 
   .home .date {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.9rem;
     opacity: 0.95;
   }
@@ -680,14 +680,14 @@ footer h2 {
   #ceremony h3,
   #reception h3,
   #location h3 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.8rem;
   }
 
   #ceremony p,
   #reception p,
   #location p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
   }
 
@@ -881,6 +881,7 @@ footer h2 {
     display: none !important;
   }
 }
+
 
 
 
