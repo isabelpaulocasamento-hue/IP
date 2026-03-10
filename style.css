@@ -652,6 +652,15 @@ footer h2 {
     opacity: 0.95;
   }
 
+  /* FLOR DECORATIVA — AGORA MAIOR */
+  .home::before {
+    width: 180px;
+    height: 150px;
+    top: 20px !important;
+    right: 10px;
+    background-size: contain;
+  }
+
   /* Imagem inicial após infos */
   .home-img-sm {
     display: block !important;
@@ -688,7 +697,7 @@ footer h2 {
 
   /* Link "Ver no mapa" menor */
   .location a {
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding: 8px 12px;
     display: inline-block;
   }
@@ -854,22 +863,6 @@ footer h2 {
   }
 }
 
-/* Ajustes extra para ecrãs muito pequenos */
-@media (max-width:480px) {
-  h1 {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
-  .home::before {
-    width: 100px;
-    height: 80px;
-    top: 15px;
-    right: 5px;
-    transform: rotate(-5deg);
-  }
-}
-
 /* Remover imagem final no mobile */
 @media (max-width:768px) {
   .registry-img {
@@ -877,15 +870,6 @@ footer h2 {
   }
 }
 
-@media (max-width:768px) {
-  .home::before {
-    width: 180px;   /* aumenta a largura */
-    height: 150px;  /* aumenta a altura */
-    top: 20px !important;
-    right: 10px;
-    background-size: contain;
-  }
-}
 
 
 
