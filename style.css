@@ -656,7 +656,7 @@ footer h2 {
   .home::before {
     width: 180px;
     height: 150px;
-    top: 20px !important;
+    top: 40px !important;
     right: 10px;
     background-size: contain;
   }
@@ -869,6 +869,7 @@ footer h2 {
     display: none !important;
   }
 }
+
 
 
 
