@@ -609,7 +609,6 @@ footer h2 {
 }
 
 
-
 /* <=================== MOBILE ===================> */
 
 @media (max-width:768px) {
@@ -636,10 +635,26 @@ footer h2 {
     white-space: nowrap;
   }
 
-  /* h1 menor */
-  h1 {
-    font-size: 2.4rem;
-    line-height: 2.8rem;
+  /* ============================
+     PARTE INICIAL — MAIOR
+     ============================ */
+
+  .home h1 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .home .names {
+    font-size: 2.3rem;
+    line-height: 2.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .home .date {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    opacity: 0.95;
   }
 
   /* Imagem inicial após infos */
@@ -658,10 +673,28 @@ footer h2 {
     display: none !important;
   }
 
+  /* ============================
+     SUBSECÇÕES — LIGEIRAMENTE MENORES
+     ============================ */
+
+  #ceremony h3,
+  #reception h3,
+  #location h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  #ceremony p,
+  #reception p,
+  #location p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   /* Link "Ver no mapa" menor */
   .location a {
-    font-size: 1.5rem;
-    padding: 10px 14px;
+    font-size: 1.2rem;
+    padding: 8px 12px;
     display: inline-block;
   }
 
