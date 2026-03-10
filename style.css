@@ -680,7 +680,7 @@ footer h2 {
   #ceremony h3,
   #reception h3,
   #location h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 0.8rem;
   }
 
@@ -693,7 +693,7 @@ footer h2 {
 
   /* Link "Ver no mapa" menor */
   .location a {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     padding: 8px 12px;
     display: inline-block;
   }
@@ -881,6 +881,7 @@ footer h2 {
     display: none !important;
   }
 }
+
 
 
 
