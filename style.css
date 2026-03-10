@@ -652,10 +652,10 @@ footer h2 {
     opacity: 0.95;
   }
 
-  /* FLOR DECORATIVA — AGORA MAIOR */
+  /* FLOR DECORATIVA — MAIOR E MAIS BAIXA */
   .home::before {
-    width: 180px;
-    height: 150px;
+    width: 210px;
+    height: 170px;
     top: 60px !important;
     right: 2px;
     background-size: contain;
@@ -678,21 +678,21 @@ footer h2 {
   }
 
   /* ============================
-     SUBSECÇÕES — LIGEIRAMENTE MENORES
+     SUBSECÇÕES — MAIS PEQUENAS
      ============================ */
 
   #ceremony h3,
   #reception h3,
   #location h3 {
     font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 
   #ceremony p,
   #reception p,
   #location p {
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
   }
 
   /* Link "Ver no mapa" menor */
@@ -765,6 +765,7 @@ footer h2 {
     padding: 20px;
     font-size: 1.2rem;
     text-align: center;
+    white-space: nowrap; /* mantém numa linha */
   }
 
   /* Remover padding gigante */
@@ -828,6 +829,7 @@ footer h2 {
     margin-top: 3vh;
     margin-inline: auto;
     display: block;
+    white-space: nowrap; /* mantém numa linha */
   }
 
   /* GALERIA — 1 imagem por slide */
@@ -853,6 +855,31 @@ footer h2 {
     padding: 6px 10px;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(4px);
+  }
+
+  /* ============================
+     AJUSTES ESPECÍFICOS
+     ============================ */
+
+  /* Viagem & Estadia alinhado à esquerda */
+  #travel h2 {
+    text-align: left !important;
+    margin-left: 1rem;
+  }
+
+  /* Menos espaço entre Provar / Explorar / Onde Ficar */
+  #food h3,
+  #explore h3,
+  #stay h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Informações alinhado à esquerda */
+  #info h2,
+  #info p {
+    text-align: left !important;
+    margin-left: 1rem;
   }
 }
 
