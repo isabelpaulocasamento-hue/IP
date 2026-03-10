@@ -608,6 +608,8 @@ footer h2 {
 
 }
 
+
+
 /* <=================== MOBILE ===================> */
 
 @media (max-width:768px) {
@@ -622,6 +624,16 @@ footer h2 {
   /* Flor ajustada */
   .home::before {
     top: 30px !important;
+  }
+
+  /* Títulos das secções — alinhados e consistentes */
+  section h2 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.2rem;
+    white-space: nowrap; /* mantém "Viagem e Estadia" numa linha */
   }
 
   /* h1 menor */
@@ -657,7 +669,6 @@ footer h2 {
      MENU MOBILE SUAVE
      ============================ */
 
-  /* Ícone hambúrguer */
   .checkbtn {
     display: block;
     font-size: 32px;
@@ -667,12 +678,10 @@ footer h2 {
     transition: transform 0.3s ease;
   }
 
-  /* Animação do ícone */
   #check:checked + .checkbtn i {
     transform: rotate(90deg);
   }
 
-  /* Menu */
   nav ul {
     position: fixed;
     top: 0;
@@ -695,7 +704,6 @@ footer h2 {
     z-index: 1000;
   }
 
-  /* Quando abre */
   #check:checked ~ ul {
     left: 0;
     opacity: 1;
@@ -864,6 +872,8 @@ footer h2 {
     transform: rotate(-5deg);
   }
 }
+
+
 
 
 
