@@ -620,11 +620,6 @@ footer h2 {
     overflow-x: hidden;
   }
 
-  /* Flor ajustada */
-  .home::before {
-    top: 30px !important;
-  }
-
   /* Títulos das secções — alinhados e consistentes */
   section h2 {
     font-size: 1.9rem;
@@ -881,6 +876,17 @@ footer h2 {
     display: none !important;
   }
 }
+
+@media (max-width:768px) {
+  .home::before {
+    width: 180px;   /* aumenta a largura */
+    height: 150px;  /* aumenta a altura */
+    top: 20px !important;
+    right: 10px;
+    background-size: contain;
+  }
+}
+
 
 
 
