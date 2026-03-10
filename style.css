@@ -633,7 +633,7 @@ footer h2 {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     line-height: 2.2rem;
-    white-space: nowrap; /* mantém "Viagem e Estadia" numa linha */
+    white-space: nowrap;
   }
 
   /* h1 menor */
@@ -646,7 +646,7 @@ footer h2 {
   .home-img-sm {
     display: block !important;
     width: 100%;
-    height: 70vw; /* mesma proporção da galeria */
+    height: 70vw;
     background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
     background-size: cover;
     background-position: center;
@@ -665,10 +665,7 @@ footer h2 {
     display: inline-block;
   }
 
-  /* ============================
-     MENU MOBILE SUAVE
-     ============================ */
-
+  /* MENU MOBILE SUAVE */
   .checkbtn {
     display: block;
     font-size: 32px;
@@ -688,17 +685,13 @@ footer h2 {
     left: -100%;
     width: 100%;
     height: 100vh;
-
     padding-top: 120px;
-
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-
     opacity: 0;
     transition: left 0.4s ease, opacity 0.4s ease;
     z-index: 1000;
@@ -742,10 +735,7 @@ footer h2 {
     padding: 0 1rem !important;
   }
 
-  /* ============================
-     COUNTDOWN — horizontal
-     ============================ */
-
+  /* COUNTDOWN — horizontal */
   .simply-countdown {
     display: flex !important;
     flex-direction: row !important;
@@ -762,7 +752,6 @@ footer h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 90px;
     height: 90px;
     min-width: 90px;
@@ -777,10 +766,7 @@ footer h2 {
     font-size: 12px;
   }
 
-  /* ============================
-     REGISTRY
-     ============================ */
-
+  /* REGISTRY */
   #registry {
     flex-direction: column;
     align-items: center;
@@ -801,20 +787,13 @@ footer h2 {
     margin-bottom: 1rem;
   }
 
-  /* ============================
-     IMAGEM FINAL — mesma proporção da galeria
-     ============================ */
-
   #registry button {
     margin-top: 3vh;
     margin-inline: auto;
     display: block;
   }
 
-  /* ============================
-     GALERIA — 1 imagem por slide
-     ============================ */
-
+  /* GALERIA — 1 imagem por slide */
   .gallery-wrapper {
     overflow: hidden;
     width: 100%;
@@ -863,11 +842,14 @@ footer h2 {
   }
 }
 
+/* Remover imagem final no mobile */
 @media (max-width:768px) {
   .registry-img {
     display: none !important;
   }
 }
+
+
 
 
 
