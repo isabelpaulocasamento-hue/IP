@@ -954,6 +954,39 @@ footer h2 {
   }
 }
 
+/* <=================== AJUSTE DO LIMITE ESQUERDO ===================> */
+
+@media (max-width:768px) {
+
+  /* Mesma margem lateral que o resto do site */
+  #stay,
+  #registry {
+    padding: 5vh 1rem !important;
+  }
+
+  /* Títulos sem empurrar ainda mais para a direita */
+  #stay h2,
+  #registry h2 {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Texto de Informações alinhado ao mesmo limite */
+  #registry p.text,
+  #registry .contacts li {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Botão final alinhado ao mesmo limite e sem cortar texto */
+  #registry .huge-btn {
+    margin-left: 0 !important;
+    white-space: nowrap;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
 
 
 
