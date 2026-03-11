@@ -898,49 +898,56 @@ footer h2 {
 }
 
 
-/* <=================== AJUSTES CORRIGIDOS MOBILE ===================> */
+/* <=================== CORREÇÕES FINAIS MOBILE ===================> */
 
 @media (max-width:768px) {
 
-  /* 1) Texto da cerimónia e copo de água mais pequeno */
-  .event-header h3 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .container-in .text {
-    font-size: 0.85rem;
-    line-height: 1.4rem;
-  }
-
-  /* 2) Viagem & Estadia alinhado à esquerda */
+  /* 1) Viagem & Estadia — alinhar à esquerda */
   #stay h2 {
     text-align: left !important;
     margin-left: 1rem;
   }
 
-  /* 3) Menos espaço entre Provar / Explorar / Onde Ficar */
-  #stay h3 {
-    margin-top: 1.2rem;
-    margin-bottom: 0.6rem;
+  /* 2) Informações — alinhar título e texto à esquerda */
+  #registry h2 {
+    text-align: left !important;
+    margin-left: 1rem;
   }
 
-  /* 4) Informações alinhado à esquerda */
-  #registry h2,
   #registry p.text {
     text-align: left !important;
     margin-left: 1rem;
   }
 
-  /* 5) Botão final numa só linha e sem cortar texto */
-  .huge-btn {
+  /* 3) Botão final — largura total e texto numa linha */
+  #registry .huge-btn {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: 1rem;
     white-space: nowrap;
-    max-width: 95%;
-    padding: 14px 18px;
+    padding: 14px 20px;
     font-size: 1.1rem;
-    text-align: center;
+  }
+
+  /* 4) Menos espaço entre Provar / Explorar / Onde Ficar */
+  #stay h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* 5) Descrição da cerimónia e copo de água */
+  .event-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .container-in .text {
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
+
+
 
 
 
