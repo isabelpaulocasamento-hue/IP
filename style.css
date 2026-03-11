@@ -905,47 +905,57 @@ footer h2 {
   /* 1) Viagem & Estadia — alinhar à esquerda */
   #stay h2 {
     text-align: left !important;
-    margin-left: 1rem;
+    margin-left: 1rem !important;
   }
 
-  /* 2) Informações — alinhar título e texto à esquerda */
+  /* 2) Forçar o conteúdo de Viagem & Estadia a não ficar centrado */
+  #stay .stay-container,
+  #stay .stay-item,
+  #stay .text {
+    text-align: left !important;
+  }
+
+  /* 3) Informações — alinhar título e texto à esquerda */
   #registry h2 {
     text-align: left !important;
-    margin-left: 1rem;
+    margin-left: 1rem !important;
   }
 
-  #registry p.text {
+  #registry p.text,
+  #registry .contacts li {
     text-align: left !important;
-    margin-left: 1rem;
+    margin-left: 1rem !important;
   }
 
-  /* 3) Botão final — largura total e texto numa linha */
+  /* 4) Botão final — largura total e texto numa linha */
   #registry .huge-btn {
     display: block;
     width: fit-content;
     max-width: 100%;
-    margin-left: 1rem;
+    margin-left: 1rem !important;
     white-space: nowrap;
     padding: 14px 20px;
     font-size: 1.1rem;
   }
 
-  /* 4) Menos espaço entre Provar / Explorar / Onde Ficar */
+  /* 5) Menos espaço entre Provar / Explorar / Onde Ficar */
   #stay h3 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
 
-  /* 5) Descrição da cerimónia e copo de água */
+  /* 6) Descrição da cerimónia e copo de água */
   .event-header h3 {
-    font-size: 1.2rem;
+    font-size: 1rem !important;
   }
 
   .container-in .text {
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 0.85rem !important;
+    line-height: 1.4rem !important;
   }
 }
+
+
 
 
 
