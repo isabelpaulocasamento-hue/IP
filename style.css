@@ -898,6 +898,49 @@ footer h2 {
 }
 
 
+/* <=================== AJUSTES CORRIGIDOS MOBILE ===================> */
+
+@media (max-width:768px) {
+
+  /* 1) Texto da cerimónia e copo de água mais pequeno */
+  .event-header h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .container-in .text {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+  }
+
+  /* 2) Viagem & Estadia alinhado à esquerda */
+  #stay h2 {
+    text-align: left !important;
+    margin-left: 1rem;
+  }
+
+  /* 3) Menos espaço entre Provar / Explorar / Onde Ficar */
+  #stay h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* 4) Informações alinhado à esquerda */
+  #registry h2,
+  #registry p.text {
+    text-align: left !important;
+    margin-left: 1rem;
+  }
+
+  /* 5) Botão final numa só linha e sem cortar texto */
+  .huge-btn {
+    white-space: nowrap;
+    max-width: 95%;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
 
 
 
