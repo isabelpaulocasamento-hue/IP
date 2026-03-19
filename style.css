@@ -76,7 +76,6 @@ body {
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Cinzel', serif;
     color: var(--texto-escuro);
 }
 
@@ -87,6 +86,14 @@ html {
 .hz-margin {
     padding: 0 var(--horizontal-margin-spacing);
 }
+body {
+    font-family: 'Quincy', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Quincy', sans-serif;
+}
+
 
 /* <===================HEADINGS===================> */
 
