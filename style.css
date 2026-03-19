@@ -235,7 +235,6 @@ a:hover {
     display: none;
 }
 
-
 /* <===================HOME===================> */
 
 .home::before {
@@ -257,41 +256,42 @@ a:hover {
   position: relative;
 }
 
-
 .container-out {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;              /* corrigido: antes 100vw */
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
+/* ESTA CLASSE JÁ NÃO TEM IMAGEM — APENAS PROPRIEDADES GENÉRICAS */
 .home-img {
-    background-image: url('Images_IsaPaulin/capa.jpeg');
-    background-size: cover;   /* corrigido: antes 107% */
-    background-position: center;
-    height: auto;             /* evita scroll interno */
-    width: 100%;              /* ocupa largura sem criar barra extra */
-    overflow: visible;        /* não cria scroll próprio */
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  overflow: visible;
 }
 
 .home-img-sm {
-    display: none;
-    width: 100%;
-    margin: 20px 0 0 0;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
+  display: none;
+  width: 100%;
+  margin: 20px 0 0 0;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
 }
 
+/* AQUI É ONDE A IMAGEM É DEFINIDA E AJUSTADA */
 #home-img-lg {
-    display: block;
-    height: auto;             /* corrigido: antes 110vh */
-    min-height: 80vh;         /* altura mínima confortável */
-    width: 50%;               /* corrigido: antes 50vw */
-    background-position: center;
-    background-size: cover;
-    overflow: visible;        /* não cria scroll próprio */
+  display: block;
+  background-image: url('Images_IsaPaulin/capa.jpeg');
+  background-size: cover;
+  background-position: top;   /* MOSTRA MAIS DO TOPO — NÃO CORTA A TESTA */
+  height: auto;
+  min-height: 80vh;
+  width: 50%;
+  overflow: visible;
 }
 
 .event-header {
@@ -312,11 +312,11 @@ a:hover {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
+  filter: invert(27%) sepia(45%) saturate(600%) hue-rotate(340deg) brightness(90%);
 }
 
 .location a {
-  color: rgba(140, 94, 60, 1); /* castanho */
+  color: rgba(140, 94, 60, 1);
   text-decoration: none;
   font-weight: bold;
 }
@@ -324,6 +324,10 @@ a:hover {
 .location a:hover {
   text-decoration: underline;
 }
+
+
+
+
 
 /* <===================TIMELINE===================> */
 
