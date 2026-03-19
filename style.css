@@ -84,6 +84,7 @@ h1 {
     line-height: var(--h1-size);
     color: var(--h1cor);
     letter-spacing: 1px;
+    font-family: 'Quincy', sans-serif; /* ADICIONADO */
 }
 
 h2 {
@@ -91,18 +92,21 @@ h2 {
     font-weight: bold;
     color: var(--h2cor);
     letter-spacing: 0.5px;
+    font-family: 'Quincy', sans-serif; /* ADICIONADO */
 }
 
 h3 {
     font-size: var(--h3-size);
     font-weight: 500;
     color: var(--h3cor);
+    font-family: 'Quincy', sans-serif; /* ADICIONADO */
 }
+
 
 /* <===================TEXT===================> */
 
 .text {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quincy', sans-serif;
     font-size: var(--text-size);
     line-height: 1.6;
     color: var(--texto-escuro);
