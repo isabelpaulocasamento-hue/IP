@@ -122,7 +122,7 @@ h3 {
 /* <===================TEXT===================> */
 
 .text {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quincy', sans-serif;
     font-size: var(--text-size);
     line-height: 1.6;
     color: var(--texto-escuro);
@@ -176,43 +176,46 @@ h3 {
 
 /* <===================NAVBAR===================> */
 
-
 label.logo {
-    padding: 0 0 0 30px;
-    line-height: 80px;
+    padding-left: 30px;
+    height: 80px;              /* igual ao menu */
     display: flex;
     align-items: center;
 }
 
 label.logo img {
-    height: 10px;   /* ajusta o tamanho aqui */
+    height: 28px;              /* tamanho ideal do logo */
     width: auto;
     display: block;
 }
 
-nav ul{
+nav ul {
     float: right;
     margin-right: 20px;
     list-style: none;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-nav ul li a{
-    font-family: 'Quicksand', sans-serif;
+
+nav ul li a {
+    font-family: 'Quincy', sans-serif;   /* corrigido */
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
 }
-a:hover{
-    color: rgba(140, 94, 60, 1); 
+
+a:hover {
+    color: rgba(140, 94, 60, 1);
     transition: .5s;
 }
-.checkbtn{
+
+.checkbtn {
     font-size: 30px;
     float: right;
     line-height: 80px;
@@ -220,7 +223,8 @@ a:hover{
     cursor: pointer;
     display: none;
 }
-#check{
+
+#check {
     display: none;
 }
 
