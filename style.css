@@ -1,5 +1,21 @@
 /* <===================CSS VARIABLES===================> */
 
+@font-face {
+    font-family: 'Amoresa';
+    src: url('fonts/Amoresa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quincy';
+    src: url('fonts/Quincy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 :root {
 
     --h1-size: 7rem;
