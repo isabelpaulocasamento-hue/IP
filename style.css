@@ -182,7 +182,8 @@ label.logo{
     line-height: 80px;
     padding: 0 0 0 30px;
     font-weight: bold;
-color: rgba(75, 90, 58, 1); /* h1*/
+    font-family: 'Amoresa', serif !important;
+color: rgba(75, 90, 58, 1); 
 }
 nav ul{
     float: right;
