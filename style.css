@@ -717,18 +717,22 @@ footer h2 {
     background-size: contain;
   }
 
-  /* Imagem inicial após infos */
+  /* ============================
+     IMAGEM MOBILE — CORRIGIDA
+     ============================ */
+
   .home-img-sm {
     display: block !important;
     width: 100%;
-    height: 70vw;
+    height: 90vh; /* antes 70vw — demasiado pequeno */
     background-image: url('Images_IsaPaulin/capa.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: top; /* evita cortar a testa */
     background-repeat: no-repeat;
     margin-top: 20px;
   }
 
+  /* Esconde a versão desktop */
   #home-img-lg {
     display: none !important;
   }
@@ -821,7 +825,7 @@ footer h2 {
     padding: 20px;
     font-size: 1.2rem;
     text-align: center;
-    white-space: nowrap; /* mantém numa linha */
+    white-space: nowrap;
   }
 
   /* Remover padding gigante */
@@ -885,7 +889,7 @@ footer h2 {
     margin-top: 3vh;
     margin-inline: auto;
     display: block;
-    white-space: nowrap; /* mantém numa linha */
+    white-space: nowrap;
   }
 
   /* GALERIA — 1 imagem por slide */
@@ -917,13 +921,11 @@ footer h2 {
      AJUSTES ESPECÍFICOS
      ============================ */
 
-  /* Viagem & Estadia alinhado à esquerda */
   #travel h2 {
     text-align: left !important;
     margin-left: 1rem;
   }
 
-  /* Menos espaço entre Provar / Explorar / Onde Ficar */
   #food h3,
   #explore h3,
   #stay h3 {
@@ -931,7 +933,6 @@ footer h2 {
     margin-bottom: 0.6rem;
   }
 
-  /* Informações alinhado à esquerda */
   #info h2,
   #info p {
     text-align: left !important;
@@ -945,6 +946,7 @@ footer h2 {
     display: none !important;
   }
 }
+
 
 /* Remover imagem final no mobile */
 @media (max-width:768px) {
