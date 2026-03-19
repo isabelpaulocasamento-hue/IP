@@ -267,7 +267,7 @@ a:hover {
 }
 
 .home-img {
-    background-image: url('Images_IsaPaulin/isa_paulin (1).jpeg');
+    background-image: url('Images_IsaPaulin/capa.jpeg');
     background-size: cover;   /* corrigido: antes 107% */
     background-position: center;
     height: auto;             /* evita scroll interno */
