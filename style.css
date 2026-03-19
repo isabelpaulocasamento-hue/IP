@@ -185,7 +185,7 @@ label.logo {
 }
 
 label.logo img {
-    height: 40px;   /* ajusta o tamanho aqui */
+    height: 10px;   /* ajusta o tamanho aqui */
     width: auto;
     display: block;
 }
