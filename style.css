@@ -1,3 +1,15 @@
+
+/* <===================aAmoresa Exceçoes===================> */
+.amp {
+    font-family: 'Amoresa', serif;
+    font-size: 1.3em; /* opcional, fica mais bonito */
+}
+.amoresa {
+    font-family: 'Amoresa', serif;
+}
+
+
+
 /* <===================CSS VARIABLES===================> */
 
 @font-face {
@@ -103,7 +115,7 @@ h3 {
 /* <===================TEXT===================> */
 
 .text {
-    font-family: 'Quincy', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: var(--text-size);
     line-height: 1.6;
     color: var(--texto-escuro);
