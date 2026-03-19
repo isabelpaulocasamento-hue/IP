@@ -184,7 +184,7 @@ label.logo {
 }
 
 label.logo img {
-    height: 28px;              /* tamanho ideal do logo */
+    height: 70px;              /* tamanho ideal do logo */
     width: auto;
     display: block;
 }
