@@ -6,10 +6,11 @@ const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
 
-window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  parallax.style.backgroundPositionX = offset * (-0.08) + "px";
-});
+// DESATIVAR ANIMAÇÃO DA CAPA.png
+// window.addEventListener("scroll", function () {
+//   let offset = window.pageYOffset;
+//   parallax.style.backgroundPositionX = offset * (-0.08) + "px";
+// });
 
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
