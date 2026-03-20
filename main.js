@@ -2,27 +2,27 @@
 // PARALLAX
 // =========================
 
-const parallax = document.getElementById("home-img-lg");
-const parallax1 = document.getElementById("parallax1");
-const parallax2 = document.getElementById("parallax2");
+// const parallax = document.getElementById("home-img-lg");
+// const parallax1 = document.getElementById("parallax1");
+// const parallax2 = document.getElementById("parallax2");
 
-// DESATIVAR ANIMAÇÃO DA CAPA.png
 // window.addEventListener("scroll", function () {
 //   let offset = window.pageYOffset;
 //   parallax.style.backgroundPositionX = offset * (-0.08) + "px";
 // });
 
-window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  offset -= 3100;
-  parallax1.style.backgroundPositionY = offset * (0.1) + "px";
-});
+// window.addEventListener("scroll", function () {
+//   let offset = window.pageYOffset;
+//   offset -= 3100;
+//   parallax1.style.backgroundPositionY = offset * (0.1) + "px";
+// });
 
-window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  offset -= 4800;
-  parallax2.style.backgroundPositionY = offset * (-0.1) + "px";
-});
+// window.addEventListener("scroll", function () {
+//   let offset = window.pageYOffset;
+//   offset -= 4800;
+//   parallax2.style.backgroundPositionY = offset * (-0.1) + "px";
+// });
+
 
 // =========================
 // FECHAR MENU MOBILE
