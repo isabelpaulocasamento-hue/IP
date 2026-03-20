@@ -954,11 +954,11 @@ footer h2 {
 }
 
 /* Esconder contactos no mobile */
-@media (max-width:768px) {
+/*@media (max-width:768px) {
   .contacts {
     display: none !important;
   }
-}
+}*/
 
 
 /* Remover imagem final no mobile */
