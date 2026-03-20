@@ -1107,6 +1107,17 @@ footer h2 {
 
 
 
+@media (max-width:768px) {
+  #registry .huge-btn {
+    display: block !important;
+    margin: 20px auto !important; /* centra o botão */
+    padding: 18px 26px !important; /* espaço confortável */
+    width: auto !important; /* deixa o botão ajustar-se ao texto */
+    max-width: 90% !important; /* evita que fique demasiado largo */
+    text-align: center !important; /* centra o texto */
+    white-space: normal !important; /* permite quebrar linha se necessário */
+  }
+}
 
 
 
