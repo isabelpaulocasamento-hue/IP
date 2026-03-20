@@ -239,7 +239,7 @@ a:hover {
 
 .home::before {
   content: "";
-  position: absolute; /* relative to .home */
+  position: fixed; /* relative to .home */
   top: 5px;
   right: 0;
   width: 400px;
