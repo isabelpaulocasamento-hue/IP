@@ -527,6 +527,17 @@ css
   text-decoration: underline;
 }
 
+.links a {
+  color: var(--h2cor); /* castanho */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.links a:hover {
+  opacity: 0.8;
+}
+
+
 .stay-icon img {
   width: 50px;               /* tamanho do ícone */
   height: auto;              /* mantém proporção */
