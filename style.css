@@ -48,7 +48,7 @@ src: url('fonts/Quincy.ttf') format('truetype');
 
     --h1cor: rgba(75, 90, 58, 1);/* verde musgo */
     --h2cor: rgba(140, 94, 60, 1); /* castanho */
-    --h3cor: rgba(140, 94, 60, 1); /* castanho*/
+    --h3cor: rgba(75, 90, 58, 1);/* verde musgo */
     --pedra-clara: rgba(231, 227, 220, 1); /* fundo claro */
     --texto-escuro: rgba(63, 63, 47, 1);/* texto principal */
     --botaocor: rgba(255, 255, 255, 1);  /* branco - letra do botao*/
