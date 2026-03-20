@@ -3,6 +3,7 @@
 .amp {
     font-family: 'Amoresa', serif;
     font-size: 1.3em; /* opcional, fica mais bonito */
+    color: var(--h2cor); 
 }
 .amoresa {
     font-family: 'Amoresa', serif;
@@ -60,7 +61,8 @@ src: url('fonts/Quincy.ttf') format('truetype');
   width: 80px;
   height: 80px;
   margin-right: 0px;
-   filter: invert(27%) sepia(34%) saturate(600%) hue-rotate(340deg) brightness(90%);
+   filter: invert(32%) sepia(11%) saturate(900%) hue-rotate(50deg) brightness(90%);
+
 }
 /* <===================BASE===================> */
 
@@ -1004,6 +1006,7 @@ footer h2 {
   /* 5) Descrição da cerimónia e copo de água */
   .event-header h3 {
     font-size: 1.45rem !important;
+    color: var(--h1cor); /* verde musgo */
   }
 
   .container-in .text {
