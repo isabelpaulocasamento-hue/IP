@@ -135,7 +135,7 @@ h3 {
 .huge-btn {
     display: block;
     font-size: 1.3rem;
-    background-color: var(--botaofundocor);
+    background-color: var(--h1cor);
     color: var(--botaocor);
     border: none;
     padding: 25px 50px;
@@ -147,7 +147,7 @@ h3 {
 }
 
 .huge-btn:hover {
-    background-color: var(--castanho-vestido);
+    background-color: rgba(60, 72, 48, 1);
     color: var(--branco-suave);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
@@ -618,7 +618,7 @@ footer h2 {
   display: inline-block;
   width: 130px;
   height: 130px;
-  background: rgba(140, 94, 60, 0.55);
+  background: rgba(75, 90, 58, 0.45);
   margin: 0 6px;
   border-radius: 50%;
   position: relative;
