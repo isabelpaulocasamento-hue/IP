@@ -2,7 +2,7 @@
 /* <===================aAmoresa Exceçoes===================> */
 .amp {
     font-family: 'Amoresa', serif;
-    font-size: 1.3em; /* opcional, fica mais bonito */
+    font-size: 1em; /* opcional, fica mais bonito */
     color: var(--h2cor); 
 }
 .amoresa {
