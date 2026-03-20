@@ -147,7 +147,7 @@ h3 {
 }
 
 .huge-btn:hover {
-    background-color: rgba(60, 72, 48, 1);
+    background-color:rgba(75, 90, 58, 0.65);
     color: var(--branco-suave);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
