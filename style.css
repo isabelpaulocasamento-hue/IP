@@ -1086,12 +1086,24 @@ footer h2 {
 }
 
 
+
 @media (max-width:768px) {
-  #registry .registry-container h2 {
+  #registry .registry-container {
     text-align: left !important;
   }
-}
 
+  #registry .registry-container h2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+
+  #registry .registry-container p,
+  #registry .registry-container ul,
+  #registry .registry-container li {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+}
 
 
 
